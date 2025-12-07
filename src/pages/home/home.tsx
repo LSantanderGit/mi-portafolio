@@ -1,9 +1,7 @@
-import "./home.css";
-
 function Home() {
 
 	return (
-		<div className="home-container">
+		<div className="">
 			<h1>Home Page</h1>
 		</div>
 	);
