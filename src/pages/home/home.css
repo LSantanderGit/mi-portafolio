@@ -1,0 +1,5 @@
+.home-container {
+    padding: 20px;
+    background-color: rgb(var(--background));
+    color: rgb(var(--foreground));
+}
