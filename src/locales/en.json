@@ -1,0 +1,15 @@
+{
+    "nav.home": "Home",
+    "nav.homeDescription": "Welcome to my portfolio.",
+
+    "nav.projects": "Projects",
+    "nav.projectsDescription": "Explore my projects.",
+    
+	"footer.rights": "All rights reserved.",
+
+	"pages.home.title": "Home",
+	"pages.home.welcome": "Welcome to my personal portfolio.",
+	
+	"pages.projects.title": "Projects",
+	"pages.projects.description": "Here you can see some of my works and projects."
+}

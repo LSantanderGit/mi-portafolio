@@ -1,0 +1,15 @@
+{
+    "nav.home": "Inicio",
+    "nav.homeDescription": "Bienvenido a mi portafolio.",
+
+    "nav.projects": "Proyectos",
+    "nav.projectsDescription": "Explora mis proyectos.",
+
+    "footer.rights": "Todos los derechos reservados.",	
+
+	"pages.home.title": "Inicio",
+	"pages.home.welcome": "Bienvenido a mi portafolio personal.",
+	
+	"pages.projects.title": "Proyectos",
+	"pages.projects.description": "Acá podes ver algunos de mis trabajos y proyectos."
+}
