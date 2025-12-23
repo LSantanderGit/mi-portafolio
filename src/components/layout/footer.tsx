@@ -6,7 +6,8 @@ export default function Footer() {
   const { t } = useTranslation();
 
   return (
-    <footer className="relative mt-24">
+    // <footer className="relative mt-24">
+    <footer>
       {/* Glow superior */}
       <div className="pointer-events-none absolute inset-x-0 -top-24 h-40 bg-gradient-to-b from-accent/10 to-transparent" />
 
