@@ -1,11 +1,36 @@
 {
+	"nav.menu": "Menu",
+
     "nav.home": "Home",
     "nav.homeDescription": "Welcome to my portfolio.",
 
     "nav.projects": "Projects",
     "nav.projectsDescription": "Explore my projects.",
+
+	"nav.settings": "Settings",
+	"nav.settingsDescription": "Adjust your preferences.",
+
+	"settings.language": "Language",
+	"settings.theme": "Theme",
     
 	"footer.rights": "All rights reserved.",
+    "footer.description": "I'm Lucas, a full-stack developer focused on building clear, scalable and well-designed products.",
+    "footer.available": "Available for work",
+    "footer.general": "General",
+    "footer.specifics": "Specifics",
+    "footer.more": "More",
+    "footer.home": "Home",
+    "footer.about": "About",
+    "footer.projects": "Projects",
+    "footer.blog": "Blog",
+    "footer.uses": "Uses",
+    "footer.bucketList": "Bucket List",
+    "footer.guestBook": "Guest Book",
+    "footer.contact": "Contact",
+    "footer.links": "Links",
+    "footer.rss": "RSS",
+    "footer.privacyPolicy": "Privacy Policy",
+    "footer.termsOfUse": "Terms of Use",
 
 	"pages.home.title": "Home",
 	"pages.home.welcome": "Welcome to my personal portfolio.",

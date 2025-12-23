@@ -1,11 +1,35 @@
 {
+	"nav.menu": "Menú",
+
     "nav.home": "Inicio",
     "nav.homeDescription": "Bienvenido a mi portafolio.",
 
     "nav.projects": "Proyectos",
     "nav.projectsDescription": "Explora mis proyectos.",
 
-    "footer.rights": "Todos los derechos reservados.",	
+	"nav.settings": "Configuración",
+	"nav.settingsDescription": "Ajusta tus preferencias.",
+	"settings.language": "Idioma",
+	"settings.theme": "Tema",
+
+    "footer.rights": "Todos los derechos reservados.",
+    "footer.description": "Soy Lucas, full-stack developer enfocado en construir productos claros, escalables y con buen diseño.",
+    "footer.available": "Disponible para trabajar",
+    "footer.general": "General",
+    "footer.specifics": "Específicos",
+    "footer.more": "Más",
+    "footer.home": "Inicio",
+    "footer.about": "Acerca de",
+    "footer.projects": "Proyectos",
+    "footer.blog": "Blog",
+    "footer.uses": "Herramientas",
+    "footer.bucketList": "Lista de Deseos",
+    "footer.guestBook": "Libro de Visitas",
+    "footer.contact": "Contacto",
+    "footer.links": "Enlaces",
+    "footer.rss": "RSS",
+    "footer.privacyPolicy": "Política de Privacidad",
+    "footer.termsOfUse": "Términos de Uso",	
 
 	"pages.home.title": "Inicio",
 	"pages.home.welcome": "Bienvenido a mi portafolio personal.",
