@@ -2,13 +2,16 @@
 	"nav.menu": "Menu",
 
     "nav.home": "Home",
-    "nav.homeDescription": "Welcome to my portfolio.",
+    "nav.home.description": "Welcome to my portfolio.",
 
     "nav.projects": "Projects",
-    "nav.projectsDescription": "Explore my projects.",
+    "nav.projects.description": "Explore my projects.",
+
+	"nav.about": "About",
+	"nav.about.description": "Learn more about me.",
 
 	"nav.settings": "Settings",
-	"nav.settingsDescription": "Adjust your preferences.",
+	"nav.settings.description": "Adjust your preferences.",
 
 	"settings.language": "Language",
 	"settings.theme": "Theme",

@@ -2,13 +2,16 @@
 	"nav.menu": "Menú",
 
     "nav.home": "Inicio",
-    "nav.homeDescription": "Bienvenido a mi portafolio.",
+    "nav.home.description": "Bienvenido a mi portafolio.",
 
     "nav.projects": "Proyectos",
-    "nav.projectsDescription": "Explora mis proyectos.",
+    "nav.projects.description": "Explora mis proyectos.",
+
+	"nav.about": "Acerca de",
+	"nav.about.description": "Conocé más sobre mí.",
 
 	"nav.settings": "Configuración",
-	"nav.settingsDescription": "Ajusta tus preferencias.",
+	"nav.settings.description": "Ajusta tus preferencias.",
 	"settings.language": "Idioma",
 	"settings.theme": "Tema",
 

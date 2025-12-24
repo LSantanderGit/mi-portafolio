@@ -27,8 +27,9 @@ export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const routes = [
-    { title: t("nav.home"), href: "/" },
-    { title: t("nav.projects"), href: "/projects" },
+    { title: t("nav.home"), href: "/", description: t("nav.home.description") },
+    { title: t("nav.projects"), href: "/projects", description: t("nav.projects.description") },
+	{ title: t("nav.about"), href: "/about", description: t("nav.about.description") },
   ];
 
   return (
@@ -66,7 +67,7 @@ export default function Header() {
 					{routes.map((route) => {
 						const isActive = location.pathname === route.href;
 						return (
-						<NavigationMenuItem key={route.href} className="relative">
+						<NavigationMenuItem key={route.href} className="relative group/item">
 							{isActive && (
 								<motion.div
 									layoutId="nav-glow"
@@ -97,6 +98,32 @@ export default function Header() {
 									{route.title}
 								</Link>
 								</NavigationMenuLink>
+
+								{/* Tooltip con descripción */}
+								<div className="
+									absolute top-full left-1/2 -translate-x-1/2 mt-2
+									opacity-0 invisible group-hover/item:opacity-100 group-hover/item:visible
+									transition-all duration-200 delay-100
+									pointer-events-none
+									z-50
+								">
+									<div className="
+										px-3 py-2 rounded-lg
+										bg-popover text-popover-foreground
+										border border-border
+										shadow-lg backdrop-blur-md
+										text-sm whitespace-nowrap
+									">
+										{route.description}
+										{/* Arrow */}
+										<div className="
+											absolute -top-1 left-1/2 -translate-x-1/2
+											w-2 h-2
+											rotate-45
+											bg-popover border-l border-t border-border
+										" />
+									</div>
+								</div>
 							</NavigationMenuItem>
 							);
 					})}
@@ -127,16 +154,16 @@ export default function Header() {
                   to={route.href}
                   onClick={() => setMobileOpen(false)}
                   className={`
-                    text-lg font-medium
                     transition-colors
                     ${
                       isActive
                         ? "text-accent-foreground bg-accent/40 rounded-md px-3 py-2"
-                        : "hover:text-accent"
+                        : "hover:text-accent px-3 py-2"
                     }
                   `}
                 >
-                  {route.title}
+                  <div className="text-lg font-medium">{route.title}</div>
+                  <div className="text-sm text-muted-foreground">{route.description}</div>
                 </Link>
               );
             })}
