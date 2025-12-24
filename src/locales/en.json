@@ -39,5 +39,7 @@
 	"pages.home.welcome": "Welcome to my personal portfolio.",
 	
 	"pages.projects.title": "Projects",
-	"pages.projects.description": "Here you can see some of my works and projects."
+	"pages.projects.description": "Here you can see some of my works and projects.",
+
+	"pages.about.title": "Hi 👋, My Name is"
 }
