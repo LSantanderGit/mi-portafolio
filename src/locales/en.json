@@ -41,5 +41,10 @@
 	"pages.projects.title": "Projects",
 	"pages.projects.description": "Here you can see some of my works and projects.",
 
-	"pages.about.title": "Hi 👋, My Name is"
+	"pages.about.title": "Hi 👋, My Name is Lucas Matías Santander",
+	"pages.about.subtitle": {
+		"": "I'm a passionate... ",
+		"profession": "Full Stack Developer",
+		"description": " ."
+	}
 }
