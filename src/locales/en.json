@@ -1,11 +1,11 @@
 {
 	"nav.menu": "Menu",
 
-    "nav.home": "Home",
-    "nav.home.description": "Welcome to my portfolio.",
+	"nav.home": "Home",
+	"nav.home.description": "Welcome to my portfolio.",
 
-    "nav.projects": "Projects",
-    "nav.projects.description": "Explore my projects.",
+	"nav.projects": "Projects",
+	"nav.projects.description": "Explore my projects.",
 
 	"nav.about": "About",
 	"nav.about.description": "Learn more about me.",
@@ -15,36 +15,43 @@
 
 	"settings.language": "Language",
 	"settings.theme": "Theme",
-    
+
 	"footer.rights": "All rights reserved.",
-    "footer.description": "I'm Lucas, a full-stack developer focused on building clear, scalable and well-designed products.",
-    "footer.available": "Available for work",
-    "footer.general": "General",
-    "footer.specifics": "Specifics",
-    "footer.more": "More",
-    "footer.home": "Home",
-    "footer.about": "About",
-    "footer.projects": "Projects",
-    "footer.blog": "Blog",
-    "footer.uses": "Uses",
-    "footer.bucketList": "Bucket List",
-    "footer.guestBook": "Guest Book",
-    "footer.contact": "Contact",
-    "footer.links": "Links",
-    "footer.rss": "RSS",
-    "footer.privacyPolicy": "Privacy Policy",
-    "footer.termsOfUse": "Terms of Use",
+	"footer.description": "I'm Lucas, a full-stack developer focused on building clear, scalable and well-designed products.",
+	"footer.available": "Available for work",
+	"footer.general": "General",
+	"footer.specifics": "Specifics",
+	"footer.more": "More",
+	"footer.home": "Home",
+	"footer.about": "About",
+	"footer.projects": "Projects",
+	"footer.blog": "Blog",
+	"footer.uses": "Uses",
+	"footer.bucketList": "Bucket List",
+	"footer.guestBook": "Guest Book",
+	"footer.contact": "Contact",
+	"footer.links": "Links",
+	"footer.rss": "RSS",
+	"footer.privacyPolicy": "Privacy Policy",
+	"footer.termsOfUse": "Terms of Use",
 
 	"pages.home.title": "Home",
 	"pages.home.welcome": "Welcome to my personal portfolio.",
-	
+
 	"pages.projects.title": "Projects",
 	"pages.projects.description": "Here you can see some of my works and projects.",
 
-	"pages.about.title": "Hi 👋, My Name is Lucas Matías Santander",
-	"pages.about.subtitle": {
-		"": "I'm a passionate... ",
-		"profession": "Full Stack Developer",
-		"description": " ."
-	}
+	"pages.about.title": "Hi 👋, My Name is",
+	"pages.about.subtitle": "I'm a passionate",
+	"pages.about.subtitle.profession": "Full Stack Developer",
+	"pages.about.subtitle.description": "Full-Stack Developer, Systems Analyst, and IT Technician focused on innovation and high performance. Cross-functional experience in front-end, back-end, and databases, creating robust and scalable solutions. Self-directed and fast learner, adaptable to multiple environments and new technologies, results-oriented.",
+
+	"pages.about.experience.title": "Work Experience",
+	"pages.about.experience.present": "Present",
+	"experience.exp1.description": "Development, maintenance, and refactoring of internal applications. Updating code and features to new technologies, including migrations to PHP 8.1 and modernization of the front-end with React.js. Responsible for the full front-end and back-end cycle, ensuring continuity and evolutionary support, without direct database administration.",
+	"experience.exp2.description": "Development and maintenance of the front-end and back-end of the website in Grails and the mobile app in AngularJS. Comprehensive management of the PostgreSQL database, using Groovy, JavaScript, HTML, and CSS to ensure the proper functioning and evolution of the applications.",
+	"experience.exp3.description": ".",
+	"work.modality.onsite": "On-site",
+	"work.modality.remote": "Remote",
+	"work.modality.hybrid": "Hybrid"
 }
