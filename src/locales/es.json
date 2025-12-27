@@ -71,10 +71,14 @@
   "pages.links.contacts.title": "Medios de Contacto",
   "pages.links.contacts.items.email.title": "Email",
   "pages.links.contacts.items.email.description": "Enviame un correo para proyectos o consultas profesionales",
+  "pages.links.contacts.items.phone.title": "Teléfono",
+  "pages.links.contacts.items.phone.description": "Llamame o enviame un mensaje",
+  "pages.links.contacts.items.whatsapp.title": "WhatsApp",
+  "pages.links.contacts.items.whatsapp.description": "Chateá conmigo en WhatsApp",
+  "pages.links.contacts.items.telegram.title": "Telegram",
+  "pages.links.contacts.items.telegram.description": "Contactame vía Telegram",
   "pages.links.contacts.items.linkedin.title": "LinkedIn",
   "pages.links.contacts.items.linkedin.description": "Conectá conmigo para oportunidades profesionales",
   "pages.links.contacts.items.github.title": "GitHub",
-  "pages.links.contacts.items.github.description": "Explorá mis proyectos y contribuciones open source",
-  "pages.links.contacts.items.twitter.title": "Twitter",
-  "pages.links.contacts.items.twitter.description": "Seguime para actualizaciones y contenido sobre desarrollo"
+  "pages.links.contacts.items.github.description": "Explorá mis proyectos y contribuciones open source"
 }
