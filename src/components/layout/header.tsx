@@ -2,13 +2,15 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { Menu } from "lucide-react";
+import { Menu, Boxes, Link2 } from "lucide-react";
 
 import {
 	NavigationMenu,
 	NavigationMenuItem,
 	NavigationMenuLink,
 	NavigationMenuList,
+	NavigationMenuTrigger,
+  	NavigationMenuContent,
 } from "../ui/navigation-menu";
 
 import {
@@ -25,12 +27,36 @@ export default function Header() {
   const { t } = useTranslation();
   const location = useLocation();
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [moreOpen, setMoreOpen] = useState(false);
 
-  const routes = [
-    { title: t("nav.home"), href: "/", description: t("nav.home.description") },
-    { title: t("nav.projects"), href: "/projects", description: t("nav.projects.description") },
-	{ title: t("nav.about"), href: "/about", description: t("nav.about.description") },
-  ];
+	const routes = [
+		{ title: t("nav.home"), href: "/", description: t("nav.home.description") },
+		{ title: t("nav.projects"), href: "/projects", description: t("nav.projects.description") },
+		{ title: t("nav.about"), href: "/about", description: t("nav.about.description") },
+	];
+
+  	const moreRoutes = [
+		{
+			title: t("nav.tools"),
+			description: t("nav.tools.description"),
+			href: "/tools",
+			icon: Boxes,
+		},
+		{
+			title: t("nav.links"),
+			description: t("nav.links.description"),
+			href: "/links",
+			icon: Link2,
+		},
+	];
+
+	const isMoreRouteActive = moreRoutes.some((r) =>
+		location.pathname.startsWith(r.href)
+	);
+	const activeGlow =
+	moreOpen || isMoreRouteActive
+		? "more"
+    : location.pathname;
 
   return (
     <>
@@ -68,7 +94,7 @@ export default function Header() {
 						const isActive = location.pathname === route.href;
 						return (
 						<NavigationMenuItem key={route.href} className="relative group/item">
-							{isActive && (
+							{activeGlow === route.href && (
 								<motion.div
 									layoutId="nav-glow"
 									transition={{ type: "spring", stiffness: 500, damping: 30 }}
@@ -82,7 +108,7 @@ export default function Header() {
 									-z-10
 									"
 								/>
-								)}
+							)}
 
 								<NavigationMenuLink asChild>
 								<Link
@@ -127,6 +153,84 @@ export default function Header() {
 							</NavigationMenuItem>
 							);
 					})}
+					<NavigationMenuItem className="relative">
+						{activeGlow === "more" && (
+							<motion.div
+								layoutId="nav-glow"
+								transition={{ type: "spring", stiffness: 500, damping: 30 }}
+								className="
+								absolute inset-0
+								rounded-full
+								bg-accent/40
+								backdrop-blur-md
+								shadow-[0_0_20px_rgba(255,255,255,0.25)]
+								dark:shadow-[0_0_20px_rgba(255,255,255,0.15)]
+								-z-10
+								"
+							/>
+						)}
+						<NavigationMenuTrigger
+							onMouseEnter={() => setMoreOpen(true)}
+							onMouseLeave={() => setMoreOpen(false)}
+							onFocus={() => setMoreOpen(true)}
+							onBlur={() => setMoreOpen(false)}
+							className="
+								px-4 py-1.5 rounded-full
+								text-sm font-medium
+								transition-colors
+								hover:text-foreground
+								data-[state=open]:bg-accent/40
+							"
+						>
+							{t("nav.more") ?? "More"}
+						</NavigationMenuTrigger>
+
+
+						<NavigationMenuContent
+							onMouseEnter={() => setMoreOpen(true)}
+							onMouseLeave={() => setMoreOpen(false)}
+						>
+							<div
+								className="
+									mt-3
+									w-80
+									rounded-2xl
+									bg-popover/90
+									backdrop-blur-md
+									shadow-xl
+									p-2
+									flex flex-col gap-2
+								"
+							>
+							{moreRoutes.map((item) => (
+								<NavigationMenuLink asChild key={item.href}>
+								<Link
+									to={item.href}
+									className="
+										group flex items-start gap-3
+										rounded-xl p-3
+										border border-border/60
+										hover:border-border
+										hover:bg-accent/30
+										transition-colors
+									"
+								>
+									<item.icon className="h-5 w-5 mt-0.5 text-muted-foreground group-hover:text-foreground" />
+
+									<div>
+									<div className="text-sm font-medium">
+										{item.title}
+									</div>
+									<div className="text-xs text-muted-foreground">
+										{item.description}
+									</div>
+									</div>
+								</Link>
+								</NavigationMenuLink>
+							))}
+							</div>
+						</NavigationMenuContent>
+					</NavigationMenuItem>
 				</NavigationMenuList>
               </NavigationMenu>
             </nav>
@@ -167,6 +271,19 @@ export default function Header() {
                 </Link>
               );
             })}
+			{moreRoutes.map((item) => (
+				<Link
+				key={item.href}
+				to={item.href}
+				onClick={() => setMobileOpen(false)}
+				className="hover:text-accent px-3 py-2 transition-colors"
+				>
+				<div className="text-lg font-medium">{item.title}</div>
+				<div className="text-sm text-muted-foreground">
+					{item.description}
+				</div>
+				</Link>
+			))}
           </nav>
         </SheetContent>
       </Sheet>

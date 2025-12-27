@@ -13,6 +13,14 @@
 	"nav.settings": "Settings",
 	"nav.settings.description": "Adjust your preferences.",
 
+	"nav.more": "More",
+
+	"nav.tools": "Tools",
+	"nav.tools.description": "Stack and technologies I use",
+
+	"nav.links": "Links",
+	"nav.links.description": "Relevant links and profiles",
+
 	"settings.language": "Language",
 	"settings.theme": "Theme",
 

@@ -10,6 +10,14 @@
 	"nav.about": "Acerca de",
 	"nav.about.description": "Conocé más sobre mí.",
 
+	"nav.more": "Más",
+
+	"nav.tools": "Herramientas",
+	"nav.tools.description": "Stack y tecnologías que utilizo",
+
+	"nav.links": "Enlaces",
+	"nav.links.description": "Links relevantes y perfiles",
+
 	"nav.settings": "Configuración",
 	"nav.settings.description": "Ajusta tus preferencias.",
 	"settings.language": "Idioma",
