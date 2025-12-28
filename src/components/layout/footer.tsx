@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
-import { SiIndeed } from "react-icons/si";
+import { SiGmail } from "react-icons/si";
 
 export default function Footer() {
   const { t } = useTranslation();
@@ -44,25 +44,14 @@ export default function Footer() {
                   { label: t("footer.home"), href: "/" },
                   { label: t("footer.about"), href: "/about" },
                   { label: t("footer.projects"), href: "/projects" },
-                  { label: t("footer.blog"), href: "/blog" },
-                ]}
-              />
-
-              <FooterColumn
-                title={t("footer.specifics")}
-                links={[
-                  { label: t("footer.uses"), href: "#" },
-                  { label: t("footer.bucketList"), href: "#" },
-                  { label: t("footer.guestBook"), href: "#" },
                 ]}
               />
 
               <FooterColumn
                 title={t("footer.more")}
                 links={[
-                  { label: t("footer.contact"), href: "/contact" },
-                  { label: t("footer.links"), href: "#" },
-                  { label: t("footer.rss"), href: "/rss" },
+					{ label: t("footer.links"), href: "/links" },
+                  	{ label: t("footer.tools"), href: "/tools" },
                 ]}
               />
             </div>
@@ -75,20 +64,15 @@ export default function Footer() {
               © {new Date().getFullYear()} Lucas Matías Santander. {t("footer.rights")}
             </p>
 
-            <div className="flex gap-4 text-xs">
-              <a href="#" className="hover:text-accent transition-colors">{t("footer.privacyPolicy")}</a>
-              <a href="#" className="hover:text-accent transition-colors">{t("footer.termsOfUse")}</a>
-            </div>
-
             <div className="flex gap-4 text-muted-foreground">
 				<a href="https://github.com/LSantanderGit" aria-label="GitHub" className="hover:text-foreground transition-colors">
 					<FaGithub className="h-5 w-5" />
 				</a>
-				<a href="https://www.linkedin.com/in/lucas-matias-santander/" aria-label="LinkedIn" className="hover:text-foreground transition-colors">
+				<a href="https://www.linkedin.com/in/lucas-mat%C3%ADas-santander-99a974274/" aria-label="LinkedIn" className="hover:text-foreground transition-colors">
 					<FaLinkedin className="h-5 w-5" />
 				</a>
-				<a href="https://profile.indeed.com/p/lucasm-zibh1d0" aria-label="Indeed" className="hover:text-foreground transition-colors">
-					<SiIndeed className="h-5 w-5" />
+				<a href="mailto:lucas.santander.dev@gmail.com" aria-label="Email" className="hover:text-foreground transition-colors">
+					<SiGmail className="h-5 w-5" />
 				</a>
             </div>
           </div>
