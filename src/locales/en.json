@@ -76,5 +76,11 @@
   "pages.links.contacts.items.github.title": "GitHub",
   "pages.links.contacts.items.github.description": "Explore my projects and open source contributions",
   "pages.links.contacts.items.twitter.title": "Twitter",
-  "pages.links.contacts.items.twitter.description": "Follow me for updates and development content"
+  "pages.links.contacts.items.twitter.description": "Follow me for updates and development content",
+
+  "pages.links.form.title": "Send Me a Message!",
+  "pages.links.form.email": "Your Email",
+  "pages.links.form.subject": "Subject",
+  "pages.links.form.message": "Your Message",
+  "pages.links.form.send": "Send"
 }

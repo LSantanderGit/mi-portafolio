@@ -58,10 +58,12 @@
 
   "pages.links.title.part1": "Ponete en",
   "pages.links.title.part2": "Contacto",
+  
   "pages.links.profile.location": "Argentina, Buenos Aires, CABA",
   "pages.links.profile.description": "Full-Stack Developer apasionado por crear experiencias digitales únicas y funcionales. Siempre buscando nuevos desafíos y aprendiendo tecnologías innovadoras.",
   "pages.links.profile.imageAlt": "Foto de perfil de Lucas",
   "pages.links.profile.tags": ["Desarrollador Full-Stack", "React", "Node.js", "TypeScript"],
+  
   "pages.links.contacts.title": "Medios de Contacto",
   "pages.links.contacts.items.email.title": "Email",
   "pages.links.contacts.items.email.description": "Enviame un correo para proyectos o consultas profesionales",
@@ -74,5 +76,11 @@
   "pages.links.contacts.items.linkedin.title": "LinkedIn",
   "pages.links.contacts.items.linkedin.description": "Conectá conmigo para oportunidades profesionales",
   "pages.links.contacts.items.github.title": "GitHub",
-  "pages.links.contacts.items.github.description": "Explorá mis proyectos y contribuciones open source"
+  "pages.links.contacts.items.github.description": "Explorá mis proyectos y contribuciones open source",
+ 
+  "pages.links.form.title": "Enviame un Mensaje!",
+  "pages.links.form.email": "Tu Email",
+  "pages.links.form.subject": "Asunto",
+  "pages.links.form.message": "Tu Mensaje",
+  "pages.links.form.send": "Enviar"
 }
