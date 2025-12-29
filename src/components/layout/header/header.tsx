@@ -11,20 +11,20 @@ export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const routes = [
-    { title: t("nav.home"), href: "/", description: t("nav.home.description") },
-    { title: t("nav.projects"), href: "/projects", description: t("nav.projects.description") },
-    { title: t("nav.about"), href: "/about", description: t("nav.about.description") },
+    { title: t("nav.home."), href: "/", description: t("nav.home.description") },
+    { title: t("nav.projects."), href: "/projects", description: t("nav.projects.description") },
+    { title: t("nav.about."), href: "/about", description: t("nav.about.description") },
   ];
 
   const moreRoutes = [
     {
-      title: t("nav.tools"),
+      title: t("nav.tools."),
       description: t("nav.tools.description"),
       href: "/tools",
       icon: Boxes,
     },
     {
-      title: t("nav.links"),
+      title: t("nav.links."),
       description: t("nav.links.description"),
       href: "/links",
       icon: Link2,

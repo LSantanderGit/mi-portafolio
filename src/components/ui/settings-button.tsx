@@ -45,7 +45,7 @@ export default function SettingsButton() {
           "
         >
           <DialogHeader>
-            <DialogTitle>{t("nav.settings")}</DialogTitle>
+            <DialogTitle>{t("nav.settings.")}</DialogTitle>
             <DialogDescription>
               {t("nav.settings.description")}
             </DialogDescription>

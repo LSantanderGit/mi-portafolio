@@ -98,7 +98,7 @@ function About() {
 									drop-shadow-[0_1px_2px_rgba(0,0,0,0.2)]
 								"
               >
-                {t("pages.about.subtitle")}
+                {t("pages.about.subtitle.")}
               </h1>
 
               <h2

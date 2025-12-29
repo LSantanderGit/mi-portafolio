@@ -1,86 +1,139 @@
 {
-  "nav.menu": "Menu",
-
-  "nav.home": "Home",
-  "nav.home.description": "Welcome to my portfolio.",
-
-  "nav.projects": "Projects",
-  "nav.projects.description": "Explore my projects.",
-
-  "nav.about": "About",
-  "nav.about.description": "Learn more about me.",
-
-  "nav.settings": "Settings",
-  "nav.settings.description": "Adjust your preferences.",
-
-  "nav.more": "More",
-
-  "nav.tools": "Tools",
-  "nav.tools.description": "Stack and technologies I use",
-
-  "nav.links": "Links",
-  "nav.links.description": "Relevant links and profiles",
-
-  "settings.language": "Language",
-  "settings.theme": "Theme",
-
-  "footer.rights": "All rights reserved.",
-  "footer.description": "I'm Lucas, a full-stack developer focused on building clear, scalable and well-designed products.",
-  "footer.available": "Available for work",
-  "footer.general": "General",
-  "footer.specifics": "Specifics",
-  "footer.more": "More",
-  "footer.home": "Home",
-  "footer.about": "About",
-  "footer.projects": "Projects",
-  "footer.tools": "Tools",
-  "footer.links": "Links",
-
-  "pages.home.title": "Home",
-  "pages.home.welcome": "Welcome to my personal portfolio.",
-
-  "pages.projects.title": "Projects",
-  "pages.projects.description": "Here you can see some of my works and projects.",
-
-  "pages.about.title": "Hi 👋, My Name is",
-  "pages.about.subtitle": "I'm a passionate",
-  "pages.about.subtitle.profession": "Full Stack Developer",
-  "pages.about.subtitle.description": "Full-Stack Developer, Systems Analyst, and IT Technician focused on innovation and high performance. Cross-functional experience in front-end, back-end, and databases, creating robust and scalable solutions. Self-directed and fast learner, adaptable to multiple environments and new technologies, results-oriented.",
-
-  "pages.about.experience.title": "Work Experience",
-  "pages.about.experience.present": "Present",
-  "experience.exp1.description": "Development, maintenance, and refactoring of internal applications. Updating code and features to new technologies, including migrations to PHP 8.1 and modernization of the front-end with React.js. Responsible for the full front-end and back-end cycle, ensuring continuity and evolutionary support, without direct database administration.",
-  "experience.exp2.description": "Development and maintenance of the front-end and back-end of the website in Grails and the mobile app in AngularJS. Comprehensive management of the PostgreSQL database, using Groovy, JavaScript, HTML, and CSS to ensure the proper functioning and evolution of the applications.",
-  "experience.exp3.description": ".",
-  "work.modality.onsite": "On-site",
-  "work.modality.remote": "Remote",
-  "work.modality.hybrid": "Hybrid",
-
-  "pages.links.title.part1": "Get in",
-  "pages.links.title.part2": "Touch",
-  "pages.links.profile.location": "Argentina, Buenos Aires, CABA",
-  "pages.links.profile.description": "Full-Stack Developer passionate about creating unique and functional digital experiences. Always looking for new challenges and learning innovative technologies.",
-  "pages.links.profile.imageAlt": "Lucas profile picture",
-  "pages.links.profile.tags": ["Fullstack Developer", "React", "Node.js", "TypeScript"],
-  "pages.links.contacts.title": "Contact Methods",
-  "pages.links.contacts.items.phone.title": "Phone",
-  "pages.links.contacts.items.phone.description": "Call me or send me a message",
-  "pages.links.contacts.items.whatsapp.title": "WhatsApp",
-  "pages.links.contacts.items.whatsapp.description": "Chat with me on WhatsApp",
-  "pages.links.contacts.items.telegram.title": "Telegram",
-  "pages.links.contacts.items.telegram.description": "Contact me via Telegram",
-  "pages.links.contacts.items.email.title": "Email",
-  "pages.links.contacts.items.email.description": "Send me an email for projects or professional inquiries",
-  "pages.links.contacts.items.linkedin.title": "LinkedIn",
-  "pages.links.contacts.items.linkedin.description": "Connect with me for professional opportunities",
-  "pages.links.contacts.items.github.title": "GitHub",
-  "pages.links.contacts.items.github.description": "Explore my projects and open source contributions",
-  "pages.links.contacts.items.twitter.title": "Twitter",
-  "pages.links.contacts.items.twitter.description": "Follow me for updates and development content",
-
-  "pages.links.form.title": "Send Me a Message!",
-  "pages.links.form.email": "Your Email",
-  "pages.links.form.subject": "Subject",
-  "pages.links.form.message": "Your Message",
-  "pages.links.form.send": "Send"
+  "nav": {
+    "menu": "Menu",
+    "home": {
+      "": "Home",
+      "description": "Welcome to my portfolio."
+    },
+    "projects": {
+      "": "Projects",
+      "description": "Explore my projects."
+    },
+    "about": {
+      "": "About",
+      "description": "Learn more about me."
+    },
+    "settings": {
+      "": "Settings",
+      "description": "Adjust your preferences."
+    },
+    "more": "More",
+    "tools": {
+      "": "Tools",
+      "description": "Stack and technologies I use"
+    },
+    "links": {
+      "": "Links",
+      "description": "Relevant links and profiles"
+    }
+  },
+  "settings": {
+    "language": "Language",
+    "theme": "Theme"
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "description": "I'm Lucas, a full-stack developer focused on building clear, scalable and well-designed products.",
+    "available": "Available for work",
+    "general": "General",
+    "specifics": "Specifics",
+    "more": "More",
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "tools": "Tools",
+    "links": "Links"
+  },
+  "pages": {
+    "home": {
+      "title": "Home",
+      "welcome": "Welcome to my personal portfolio."
+    },
+    "projects": {
+      "title": "Projects",
+      "description": "Here you can see some of my works and projects."
+    },
+    "about": {
+      "title": "Hi 👋, My Name is",
+      "subtitle": {
+        "": "I'm a passionate",
+        "profession": "Full Stack Developer",
+        "description": "Full-Stack Developer, Systems Analyst, and IT Technician focused on innovation and high performance. Cross-functional experience in front-end, back-end, and databases, creating robust and scalable solutions. Self-directed and fast learner, adaptable to multiple environments and new technologies, results-oriented."
+      },
+      "experience": {
+        "title": "Work Experience",
+        "present": "Present"
+      }
+    },
+    "links": {
+      "title": {
+        "part1": "Get in",
+        "part2": "Touch"
+      },
+      "profile": {
+        "location": "Argentina, Buenos Aires, CABA",
+        "description": "Full-Stack Developer passionate about creating unique and functional digital experiences. Always looking for new challenges and learning innovative technologies.",
+        "imageAlt": "Lucas profile picture",
+        "tags": ["Fullstack Developer", "React", "Node.js", "TypeScript"]
+      },
+      "contacts": {
+        "title": "Contact Methods",
+        "items": {
+          "phone": {
+            "title": "Phone",
+            "description": "Call me or send me a message"
+          },
+          "whatsapp": {
+            "title": "WhatsApp",
+            "description": "Chat with me on WhatsApp"
+          },
+          "telegram": {
+            "title": "Telegram",
+            "description": "Contact me via Telegram"
+          },
+          "email": {
+            "title": "Email",
+            "description": "Send me an email for projects or professional inquiries"
+          },
+          "linkedin": {
+            "title": "LinkedIn",
+            "description": "Connect with me for professional opportunities"
+          },
+          "github": {
+            "title": "GitHub",
+            "description": "Explore my projects and open source contributions"
+          },
+          "twitter": {
+            "title": "Twitter",
+            "description": "Follow me for updates and development content"
+          }
+        }
+      },
+      "form": {
+        "title": "Send Me a Message!",
+        "email": "Your Email",
+        "subject": "Subject",
+        "message": "Your Message",
+        "send": "Send"
+      }
+    }
+  },
+  "experience": {
+    "exp1": {
+      "description": "Development, maintenance, and refactoring of internal applications. Updating code and features to new technologies, including migrations to PHP 8.1 and modernization of the front-end with React.js. Responsible for the full front-end and back-end cycle, ensuring continuity and evolutionary support, without direct database administration."
+    },
+    "exp2": {
+      "description": "Development and maintenance of the front-end and back-end of the website in Grails and the mobile app in AngularJS. Comprehensive management of the PostgreSQL database, using Groovy, JavaScript, HTML, and CSS to ensure the proper functioning and evolution of the applications."
+    },
+    "exp3": {
+      "description": "."
+    }
+  },
+  "work": {
+    "modality": {
+      "onsite": "On-site",
+      "remote": "Remote",
+      "hybrid": "Hybrid"
+    }
+  }
 }
