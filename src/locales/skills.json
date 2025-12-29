@@ -1,0 +1,44 @@
+[
+  {
+    "id": "react",
+    "name": "React",
+    "iconType": "lib",
+    "icon": "FaReact",
+    "category": "frontend"
+  },
+  {
+    "id": "typescript",
+    "name": "TypeScript",
+    "iconType": "lib",
+    "icon": "SiTypescript",
+    "category": "frontend"
+  },
+  {
+    "id": "tailwind",
+    "name": "Tailwind CSS",
+    "iconType": "lib",
+    "icon": "SiTailwindcss",
+    "category": "frontend"
+  },
+  {
+    "id": "node",
+    "name": "Node.js",
+    "iconType": "lib",
+    "icon": "FaNodeJs",
+    "category": "backend"
+  },
+  {
+    "id": "postgres",
+    "name": "PostgreSQL",
+    "iconType": "lib",
+    "icon": "SiPostgresql",
+    "category": "database"
+  },
+  {
+    "id": "docker",
+    "name": "Docker",
+    "iconType": "lib",
+    "icon": "FaDocker",
+    "category": "devops"
+  }
+]

@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next"
 import TechMarquee from "../../components/about/tech-marque"
 import WorkRoadmap from "../../components/about/work-roadmap"
+import SkillsGrid from "../../components/about/skills-grid"
 
 function About() {
   const { t } = useTranslation()
@@ -134,6 +135,8 @@ function About() {
           </div>
         </div>
       </section>
+
+	  <SkillsGrid />
 
       <WorkRoadmap />
     </>
