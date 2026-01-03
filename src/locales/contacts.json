@@ -6,6 +6,11 @@
 		"url": "tel:+5491132587507"
 	},
 	{
+	  "id": "email",
+	  "icon": "mail",
+	  "url": "mailto:lucas.santander.dev@gmail.com"
+	},
+	{
 		"id": "whatsapp",
 		"icon": "whatsapp",
 		"url": "https://wa.me/+5491132587507"
@@ -14,11 +19,6 @@
 		"id": "telegram",
 		"icon": "telegram",
 		"url": "https://t.me/LucasMatiasSantander_telegram"
-	},
-	{
-	  "id": "email",
-	  "icon": "mail",
-	  "url": "mailto:lucas.santander.dev@gmail.com"
 	},
 	{
 		"id": "github",

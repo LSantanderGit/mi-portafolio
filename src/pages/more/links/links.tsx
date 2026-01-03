@@ -48,7 +48,7 @@ function Links() {
             <div className="flex flex-col items-center gap-4">
               <div className="h-32 w-32 overflow-hidden rounded-full border-2 border-border">
                 <img
-                  src="/professional-developer-avatar.png"
+                  src="/assets/profile.png"
                   alt={t("pages.links.profile.imageAlt")}
                   className="h-full w-full object-cover"
                 />

@@ -1,44 +1,128 @@
 [
   {
-    "id": "react",
-    "name": "React",
+    "id": "angular",
+    "name": "Angular",
     "iconType": "lib",
-    "icon": "FaReact",
+    "icon": "angular.svg",
+    "category": "frontend" 
+  },
+  {
+    "id": "csharp",
+    "name": "C#",
+    "iconType": "lib",
+    "icon": "csharp.svg",
+    "category": "backend"
+  },
+  {
+    "id": "git",
+    "name": "Git",
+    "iconType": "lib",
+    "icon": "git.svg",
+    "category": "tooling"
+  },
+  {
+    "id": "github",
+    "name": "GitHub",
+    "iconType": "lib",
+    "icon": "github.svg",
+    "category": "tooling"
+  },
+  {
+    "id": "groovy",
+    "name": "Groovy",
+    "iconType": "lib",
+    "icon": "groovy.svg",
+    "category": "backend"
+  },
+  {
+    "id": "ionic",
+    "name": "Ionic",
+    "iconType": "lib",
+    "icon": "ionic.svg",
     "category": "frontend"
   },
   {
-    "id": "typescript",
-    "name": "TypeScript",
+    "id": "java",
+    "name": "Java",
     "iconType": "lib",
-    "icon": "SiTypescript",
-    "category": "frontend"
+    "icon": "java.png",
+    "category": "backend"
   },
   {
-    "id": "tailwind",
-    "name": "Tailwind CSS",
+    "id": "microsoftsql",
+    "name": "Microsoft SQL Server",
     "iconType": "lib",
-    "icon": "SiTailwindcss",
-    "category": "frontend"
+    "icon": "microsoftsql.svg",
+    "category": "database"
+  },
+  {
+    "id": "mysql",
+    "name": "MySQL",
+    "iconType": "lib",
+    "icon": "mysql.svg",
+    "category": "database"
+  },
+  {
+    "id": "net",
+    "name": ".NET",
+    "iconType": "lib",
+    "icon": "net.svg",
+    "category": "backend"
   },
   {
     "id": "node",
     "name": "Node.js",
     "iconType": "lib",
-    "icon": "FaNodeJs",
+    "icon": "node.svg",
+    "category": "backend"
+  },
+  {
+    "id": "oracledb",
+    "name": "Oracle",
+    "iconType": "lib",
+    "icon": "oracledb.png",
+    "category": "database"
+  },
+  {
+    "id": "php",
+    "name": "PHP",
+    "iconType": "lib",
+    "icon": "php.png",
     "category": "backend"
   },
   {
     "id": "postgres",
     "name": "PostgreSQL",
     "iconType": "lib",
-    "icon": "SiPostgresql",
+    "icon": "postgresql.png",
     "category": "database"
   },
   {
-    "id": "docker",
-    "name": "Docker",
+    "id": "react",
+    "name": "React",
     "iconType": "lib",
-    "icon": "FaDocker",
-    "category": "devops"
+    "icon": "react.svg",
+    "category": "frontend"
+  },
+  {
+    "id": "tailwind",
+    "name": "Tailwind CSS",
+    "iconType": "lib",
+    "icon": "tailwind.png",
+    "category": "frontend"
+  },
+  {
+    "id": "typescript",
+    "name": "TypeScript",
+    "iconType": "lib",
+    "icon": "typescript.png",
+    "category": "frontend"
+  },
+  {
+    "id": "vscode",
+    "name": "VS Code",
+    "iconType": "lib",
+    "icon": "vscode.png",
+    "category": "tooling"
   }
 ]

@@ -114,7 +114,10 @@
         "email": "Your Email",
         "subject": "Subject",
         "message": "Your Message",
-        "send": "Send"
+        "send": "Send",
+        "placeholder": "example@example.com",
+        "success": "Your message has been sent successfully!",
+        "error": "There was an error sending your message. Please try again later."
       }
     }
   },

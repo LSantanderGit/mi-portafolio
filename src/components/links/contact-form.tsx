@@ -63,7 +63,7 @@ export default function ContactForm() {
               value={email}
               maxLength={MAX_EMAIL}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder="email@ejemplo.com"
+              placeholder={t("pages.links.form.placeholder")}
               className="w-full rounded-md border border-border bg-background px-3 py-2 text-sm focus:border-primary focus:outline-none"
               required
             />

@@ -1,5 +1,4 @@
 import skills from "../../locales/skills.json"
-import { iconMap } from "../../locales/icon-map"
 
 export default function SkillsGrid() {
   return (
@@ -34,72 +33,70 @@ export default function SkillsGrid() {
             gap-6
           "
         >
-          {skills.map((skill) => {
-            const Icon = iconMap[skill.icon]
-
-            return (
+          {skills.map((skill) => (
+            <div
+              key={skill.id}
+              className="
+                group
+                relative
+                flex
+                items-center
+                justify-center
+                aspect-square
+                rounded-xl
+                border
+                border-border
+                bg-background
+                transition-all
+                duration-300
+                hover:scale-125
+                hover:z-10
+                hover:shadow-[0_20px_50px_rgba(0,0,0,0.35)]
+              "
+            >
+              {/* Glow */}
               <div
-                key={skill.id}
                 className="
-                  group
-                  relative
-                  flex
-                  items-center
-                  justify-center
-                  aspect-square
-                  rounded-xl
-                  border
-                  border-border
-                  bg-background
-                  transition-all
+                  absolute inset-0 rounded-xl
+                  opacity-0
+                  group-hover:opacity-100
+                  transition
+                  bg-gradient-to-br
+                  from-sky-400/30
+                  via-transparent
+                  to-purple-500/30
+                "
+              />
+
+              {/* Icon */}
+              <img
+                src={`/assets/skills/${skill.icon}`}
+                alt={skill.name}
+                className="
+                  relative z-10
+                  h-15 w-15
+                  transition-transform
                   duration-300
-                  hover:scale-125
-                  hover:z-10
-                  hover:shadow-[0_20px_50px_rgba(0,0,0,0.35)]
+                  group-hover:scale-110
+                "
+              />
+
+              {/* Tooltip */}
+              <span
+                className="
+                  pointer-events-none
+                  absolute -bottom-7
+                  text-xs
+                  opacity-0
+                  group-hover:opacity-100
+                  transition
+                  text-muted-foreground
                 "
               >
-                {/* Glow */}
-                <div
-                  className="
-                    absolute inset-0 rounded-xl
-                    opacity-0
-                    group-hover:opacity-100
-                    transition
-                    bg-gradient-to-br
-                    from-sky-400/30
-                    via-transparent
-                    to-purple-500/30
-                  "
-                />
-
-                {/* Icon */}
-                <Icon
-                  className="
-                    relative z-10
-                    text-4xl
-                    text-foreground
-                    transition-colors
-                    group-hover:text-sky-400
-                  "
-                />
-
-                {/* Tooltip */}
-                <span
-                  className="
-                    pointer-events-none
-                    absolute -bottom-7
-                    text-xs
-                    opacity-0
-                    group-hover:opacity-100
-                    transition
-                    text-muted-foreground
-                  "
-                >
-                  {skill.name}
-                </span>
-              </div>
-            )
-          })}
+                {skill.name}
+              </span>
+            </div>
+          ))}
         </div>
       </div>
     </section>
