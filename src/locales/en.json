@@ -50,8 +50,11 @@
       "welcome": "Welcome to my personal portfolio."
     },
     "projects": {
-      "title": "Projects",
-      "description": "Here you can see some of my works and projects."
+      "title":{
+			"part1": "My ",
+    		"part2": "Projects"
+		},
+		"description": "Selected work"
     },
     "about": {
       "title": "Hi 👋, My Name is",
@@ -70,6 +73,7 @@
         "part1": "Get in",
         "part2": "Touch"
       },
+	  "description": "Network",
       "profile": {
         "location": "Argentina, Buenos Aires, CABA",
         "description": "Full-Stack Developer passionate about creating unique and functional digital experiences. Always looking for new challenges and learning innovative technologies.",

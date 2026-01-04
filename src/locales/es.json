@@ -51,8 +51,11 @@
       "welcome": "Bienvenido a mi portafolio personal."
     },
     "projects": {
-      "title": "Proyectos",
-      "description": "Acá podes ver algunos de mis trabajos y proyectos."
+		"title":{
+			"part1": "Mis ",
+    		"part2": "Proyectos"
+		},
+		"description": "Trabajos seleccionados"
     },
     "about": {
       "title": "Hola 👋, Mi Nombre es",
@@ -71,6 +74,7 @@
         "part1": "Ponete en",
         "part2": "Contacto"
       },
+	  "description": "Redes",
       "profile": {
         "location": "Argentina, Buenos Aires, CABA",
         "description": "Full-Stack Developer apasionado por crear experiencias digitales únicas y funcionales. Siempre buscando nuevos desafíos y aprendiendo tecnologías innovadoras.",
