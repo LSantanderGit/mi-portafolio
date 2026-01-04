@@ -1,20 +1,26 @@
-import { Toggle } from "./toggle";
-import { useTheme } from "../theme-provider";
-import { Sun, Moon } from "lucide-react";
+import { Toggle } from "./toggle"
+import { useTheme } from "../theme-provider"
+import { Sun, Moon } from "lucide-react"
+import { useTranslation } from "react-i18next"
 
-function ThemeToggle() {
-  const { theme, toggleTheme } = useTheme();
+export default function ThemeToggle() {
+  const { theme, toggleTheme } = useTheme()
+  const { t } = useTranslation()
 
   return (
-    <Toggle
-      pressed={theme === "dark"}
-      onPressedChange={toggleTheme}
-      aria-label="Toggle theme"
-      variant="outline"
-    >
-      {theme === "dark" ? <Sun /> : <Moon />}
-    </Toggle>
-  );
-}
+    <div className="flex items-center justify-between">
+      <span className="text-sm text-muted-foreground">
+        {t("settings.theme")}
+      </span>
 
-export default ThemeToggle;
+      <Toggle
+        pressed={theme === "dark"}
+        onPressedChange={toggleTheme}
+        aria-label={t("settings.theme")}
+        variant="outline"
+      >
+        {theme === "dark" ? <Sun /> : <Moon />}
+      </Toggle>
+    </div>
+  )
+}

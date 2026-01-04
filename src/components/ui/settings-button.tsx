@@ -1,6 +1,6 @@
-import { useState } from "react";
-import { Settings } from "lucide-react";
-import { useTranslation } from "react-i18next";
+import { useState } from "react"
+import { Settings } from "lucide-react"
+import { useTranslation } from "react-i18next"
 
 import {
   Dialog,
@@ -8,14 +8,15 @@ import {
   DialogHeader,
   DialogTitle,
   DialogDescription,
-} from "./dialog";
+} from "./dialog"
 
-import ThemeToggle from "./theme-toggle";
-import LanguageSwitcher from "./language-switcher";
+import ThemeToggle from "./theme-toggle"
+import LanguageSwitcher from "./language-switcher"
+import MotionToggle from "./motion-toggle"
 
 export default function SettingsButton() {
-  const [open, setOpen] = useState(false);
-  const { t } = useTranslation();
+  const [open, setOpen] = useState(false)
+  const { t } = useTranslation()
 
   return (
     <>
@@ -52,22 +53,12 @@ export default function SettingsButton() {
           </DialogHeader>
 
           <div className="flex flex-col gap-4 pt-4">
-            <div className="flex items-center justify-between">
-              <span className="text-sm text-muted-foreground">
-                {t("settings.theme")}
-              </span>
-              <ThemeToggle />
-            </div>
-
-            <div className="flex items-center justify-between">
-              <span className="text-sm text-muted-foreground">
-                {t("settings.language")}
-              </span>
-              <LanguageSwitcher />
-            </div>
+            <ThemeToggle />
+            <LanguageSwitcher />
+            <MotionToggle />
           </div>
         </DialogContent>
       </Dialog>
     </>
-  );
+  )
 }

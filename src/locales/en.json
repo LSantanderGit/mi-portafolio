@@ -29,7 +29,8 @@
   },
   "settings": {
     "language": "Language",
-    "theme": "Theme"
+    "theme": "Theme",
+	"animations": "Animations"
   },
   "footer": {
     "rights": "All rights reserved.",

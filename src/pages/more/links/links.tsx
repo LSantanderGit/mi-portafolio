@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next"
 
 import PageTitle from "../../../components/ui/page-title"
+import Reveal from "../../../components/ui/reveal"
 
 import ProfileCard from "../../../components/links/profile-card"
 import ContactLinksCard from "../../../components/links/contact-links-card"
@@ -13,22 +14,28 @@ function Links() {
     <div className="min-h-screen px-4 py-12 md:py-16">
       <div className="mx-auto max-w-6xl">
         {/* TITLE */}
-        <PageTitle
-          titleStart={t("pages.links.title.part1")}
-          titleEnd={t("pages.links.title.part2")}
-          description={t("pages.links.description")}
-        />
+		<Reveal delay={0.1}>
+			<PageTitle
+				titleStart={t("pages.links.title.part1")}
+				titleEnd={t("pages.links.title.part2")}
+				description={t("pages.links.description")}
+			/>
+		</Reveal>
 
         {/* TOP GRID */}
-        <div className="grid gap-6 lg:grid-cols-[350px_1fr]">
-          <ProfileCard />
-          <ContactLinksCard />
-        </div>
+        <Reveal delay={0.2}>
+			<div className="grid gap-6 lg:grid-cols-[350px_1fr]">
+				<ProfileCard />
+				<ContactLinksCard />
+			</div>
+		</Reveal>
 
         {/* FORM */}
-        <div className="mt-10">
-          <ContactForm />
-        </div>
+        <Reveal delay={0.3}>
+			<div className="mt-10">
+			<ContactForm />
+			</div>
+        </Reveal>
       </div>
     </div>
   )
