@@ -19,7 +19,7 @@
       { "label": "Oracle DB", "icon": "SiOracle" },
       { "label": "PostgreSQL", "icon": "SiPostgresql" }
     ],
-    "logo": "/placeholder.svg?height=80&width=80"
+    "logo": "/assets/work-experience/hcdn.png"
   },
   {
     "id": "exp-2",
@@ -39,7 +39,7 @@
       { "label": "Ionic", "icon": "SiIonic" },
       { "label": "PostgreSQL", "icon": "SiPostgresql" }
     ],
-    "logo": "/placeholder.svg?height=80&width=80"
+    "logo": "/assets/work-experience/calim.png"
   },
   {
     "id": "exp-3",
@@ -57,6 +57,6 @@
       { "label": "PHP", "icon": "SiPhp" },
       { "label": "MySQL", "icon": "SiMysql" }
     ],
-    "logo": "/placeholder.svg?height=80&width=80"
+    "logo": "/assets/work-experience/pronectis.png"
   }
 ]

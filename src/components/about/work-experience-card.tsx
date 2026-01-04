@@ -49,7 +49,7 @@ export default function WorkExperienceCard({
         <img
           src={experience.logo || "/placeholder.svg"}
           alt={experience.company}
-          className="w-14 h-14 rounded-xl object-cover border-2 border-border flex-shrink-0"
+          className="w-17 h-17 rounded-xl object-cover border-2 border-border flex-shrink-0"
         />
 
         {/* Contenido */}
