@@ -1,14 +1,19 @@
-import { Outlet, useLocation } from "react-router-dom";
-import { AnimatePresence, motion } from "framer-motion";
+"use client"
 
-import Header from "./header/header";
-import Footer from "./footer";
+import { Outlet, useLocation } from "react-router-dom"
+import { AnimatePresence, motion } from "framer-motion"
+
+import Header from "./header/header"
+import Footer from "./footer"
+import { LavaLampBackground } from "./lava-lamp-background"
 
 function Layout() {
-  const location = useLocation();
+  const location = useLocation()
 
   return (
     <div className="flex flex-col min-h-screen text-foreground">
+      <LavaLampBackground />
+
       <Header />
 
       {/* PAGE TRANSITIONS */}
@@ -32,7 +37,7 @@ function Layout() {
 
       <Footer />
     </div>
-  );
+  )
 }
 
-export default Layout;
+export default Layout
