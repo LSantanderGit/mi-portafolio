@@ -4,8 +4,8 @@
     "title": "HCDN UI System",
     "description": "Design system for internal applications.",
     "images": [
-      "/projects/hcdn/1.png",
-      "/projects/hcdn/2.png"
+      "hcdn/1.png",
+      "hcdn/2.png"
     ],
     "tech": ["React", "Tailwind", "Radix UI"],
     "color": {
@@ -18,8 +18,8 @@
     "title": "Personal Portfolio",
     "description": "My personal portfolio built with React and Vite.",
     "images": [
-      "/assets/projects/portfolio/1.png",
-      "/assets/projects/portfolio/2.png"
+      "portfolio/1.png",
+      "portfolio/2.png"
     ],
     "tech": ["React", "Vite", "Framer Motion"],
     "color": {

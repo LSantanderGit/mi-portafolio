@@ -79,7 +79,7 @@ export default function ProjectCarousel({
         {images.map((src, i) => (
           <img
             key={i}
-            src={src}
+            src={"/assets/projects/" + src}
             alt=""
             className="h-full w-full flex-shrink-0 object-cover"
             draggable={false}
