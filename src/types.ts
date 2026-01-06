@@ -23,3 +23,16 @@ export type WorkExperience = {
   logo?: string
 }
 
+export type Project = {
+  id: string
+  title: string
+  description: string
+  images: string[]
+  tech: string[]
+  link?: string
+  color: {
+    light: string
+    dark: string
+  }
+}
+

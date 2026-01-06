@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next"
 import PageTitle from "../../components/ui/page-title"
 import Reveal from "../../components/ui/reveal"
+import ProjectsTimeline from "../../components/projects/project-timeline"
 
 function Projects() {
   const { t } = useTranslation()
@@ -15,6 +16,8 @@ function Projects() {
 				description={t("pages.projects.description")}
 			/>
 		</Reveal>
+
+		<ProjectsTimeline />
       </div>
     </div>
   )

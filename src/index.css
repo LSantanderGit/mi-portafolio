@@ -269,3 +269,23 @@
 .animate-blob-6 {
   animation: blob-6 10s ease-in-out infinite;
 }
+
+/* glow hover effect */
+.project-glow::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 300ms ease;
+  pointer-events: none; /* 👈 CLAVE */
+  background: radial-gradient(
+    circle at var(--x) var(--y),
+    var(--glow-color),
+    transparent 45%
+  );
+}
+
+.project-glow:hover::after {
+  opacity: 1;
+}
+
