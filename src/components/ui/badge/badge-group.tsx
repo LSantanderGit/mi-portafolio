@@ -19,11 +19,13 @@ export default function BadgeGroup({
   gap = "md",
   align = "start",
   className,
-}: BadgeGroupProps) {
+  wrap = true,
+}: BadgeGroupProps & { wrap?: boolean }) {
   return (
     <div
       className={clsx(
-        "flex flex-wrap items-center",
+        "flex items-center",
+        wrap ? "flex-wrap" : "flex-nowrap",
         gapClasses[gap],
         alignClasses[align],
         className

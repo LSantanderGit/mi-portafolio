@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next"
-import TechMarquee from "./tech-marque"
+import TechMarquee from "./tech/tech-marque"
 
 export default function AboutHero() {
   const { t } = useTranslation()

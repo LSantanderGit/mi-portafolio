@@ -77,4 +77,48 @@ export const BADGE_REGISTRY: Record<BadgeKey, BadgeDefinition> = {
 		label: "MySQL",
 		icon: "mysql.svg",
 	},
+	csharp: {
+		label: "C#",
+		icon: "csharp.svg",
+	},
+	dotnet: {
+		label: ".NET",
+		icon: "net.png",
+	},
+	git: {
+		label: "Git",
+		icon: "git.svg",
+	},
+	linux: {
+		label: "Linux",
+		variant: "secondary",
+	},
+	"clean-code": {
+		label: "Clean Code",
+		variant: "outline",
+	},
+	solid: {
+		label: "SOLID",
+		variant: "outline",
+	},
+	oop: {
+		label: "OOP",
+		variant: "outline",
+	},
+	"design-patterns": {
+		label: "Design Patterns",
+		variant: "outline",
+	},
+	"problem-solving": {
+		label: "Problem Solving",
+		variant: "secondary",
+	},
+	debugging: {
+		label: "Debugging",
+		variant: "secondary",
+	},
+	refactoring: {
+		label: "Refactoring",
+		variant: "secondary",
+	},
 }

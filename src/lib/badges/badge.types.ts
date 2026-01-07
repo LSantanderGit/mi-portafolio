@@ -2,7 +2,7 @@ export type BadgeProps = {
 	label: string
 	icon?: string // nombre del archivo en /public/assets/icons
 	size?: "sm" | "md" | "lg"
-	variant?: "default" | "secondary" | "outline"
+	variant?: "default" | "secondary" | "outline" | "code"
 	className?: string
 }
 
@@ -33,9 +33,20 @@ export type BadgeKey =
   | "angularjs"
   | "ionic"
   | "mysql"
+  | "csharp"
+  | "dotnet"
+  | "git"
+  | "linux"
+  | "clean-code"
+  | "solid"
+  | "oop"
+  | "design-patterns"
+  | "problem-solving"
+  | "debugging"
+  | "refactoring"
 
 export type BadgeDefinition = {
   label: string
   icon?: string
-  variant?: "default" | "secondary" | "outline"
+  variant?: "default" | "secondary" | "outline" | "code"
 }

@@ -1,6 +1,6 @@
 import TechRow from "./tech-row";
-import { techStack } from "../../locales/tech-stacks";
-import { shuffleArray } from "../../utils/shuffle";
+import { techStack } from "../../../locales/tech-stacks";
+import { shuffleArray } from "../../../utils/shuffle";
 
 const ITEMS_PER_ROW = 8;
 

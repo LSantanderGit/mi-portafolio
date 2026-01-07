@@ -8,12 +8,19 @@ const sizeClasses = {
 }
 
 const variantClasses = {
-  default:
-    "bg-primary/10 text-primary border border-primary/20",
-  secondary:
-    "bg-muted text-muted-foreground border border-border",
-  outline:
-    "bg-transparent text-foreground border border-border",
+	default:
+		"bg-primary/10 text-primary border border-primary/20",
+	secondary:
+		"bg-muted text-muted-foreground border border-border",
+	outline:
+		"bg-transparent text-foreground border border-border",
+	code: `
+		bg-background/70
+		border border-border
+		backdrop-blur-md
+		shadow-sm
+		text-foreground
+	`,
 }
 
 export default function Badge({
