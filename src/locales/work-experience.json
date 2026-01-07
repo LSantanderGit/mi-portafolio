@@ -2,60 +2,51 @@
   {
     "id": "exp-1",
     "company": "Honorable Camara de Diputados (HCDN).",
-    "period": {
-      "start": "2025-06",
-      "end": "present"
-    },
-	"ubication": "Argentina",
-  	"modality": "hybrid",
+    "period": { "start": "2025-06", "end": "present" },
+    "ubication": "Argentina",
+    "modality": "hybrid",
     "description": "experience.exp1.description",
     "technologies": [
-      { "label": "React", "icon": "SiReact" },
-      { "label": "TypeScript", "icon": "SiTypescript" },
-      { "label": "PHP", "icon": "SiPhp" },
-      { "label": "Vue.js", "icon": "SiVuedotjs" },
-      { "label": "SCSS", "icon": "SiScss" },
-      { "label": "Flutter", "icon": "SiFlutter" },
-      { "label": "Oracle DB", "icon": "SiOracle" },
-      { "label": "PostgreSQL", "icon": "SiPostgresql" }
+      "react",
+      "typescript",
+      "php",
+      "vue",
+      "scss",
+      "flutter",
+      "oracle",
+      "postgresql"
     ],
     "logo": "/assets/work-experience/hcdn.png"
   },
   {
     "id": "exp-2",
     "company": "Calim - Estudio Contable Digital",
-    "period": {
-      "start": "2023-10",
-      "end": "2025-06"
-    },
-	"ubication": "Argentina",
-  	"modality": "hybrid",
+    "period": { "start": "2023-10", "end": "2025-06" },
+    "ubication": "Argentina",
+    "modality": "hybrid",
     "description": "experience.exp2.description",
     "technologies": [
-      { "label": "Groovy", "icon": "SiGroovy" },
-      { "label": "Grails", "icon": "SiGrails" },
-	  {"label": "JavaScript", "icon": "SiJavascript" },
-      { "label": "AngularJS", "icon": "SiAngular" },
-      { "label": "Ionic", "icon": "SiIonic" },
-      { "label": "PostgreSQL", "icon": "SiPostgresql" }
+      "groovy",
+      "grails",
+      "javascript",
+      "angularjs",
+      "ionic",
+      "postgresql"
     ],
     "logo": "/assets/work-experience/calim.png"
   },
   {
     "id": "exp-3",
     "company": "Pronectis",
-    "period": {
-      "start": "2021-05",
-      "end": "2021-12"
-    },
-	"ubication": "Argentina",
-  	"modality": "hybrid",
+    "period": { "start": "2021-05", "end": "2021-12" },
+    "ubication": "Argentina",
+    "modality": "hybrid",
     "description": "experience.exp3.description",
     "technologies": [
-      { "label": "JavaScript", "icon": "SiJavascript" },
-      { "label": "WordPress", "icon": "SiWordpress" },
-      { "label": "PHP", "icon": "SiPhp" },
-      { "label": "MySQL", "icon": "SiMysql" }
+      "javascript",
+      "wordpress",
+      "php",
+      "mysql"
     ],
     "logo": "/assets/work-experience/pronectis.png"
   }

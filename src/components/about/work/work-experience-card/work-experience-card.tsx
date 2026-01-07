@@ -1,8 +1,8 @@
 "use client"
 
-import * as SimpleIcons from "react-icons/si"
-import type { WorkExperience } from "../../types"
 import { MapPin, Laptop, Users, Building } from "lucide-react"
+import type { WorkExperience } from "../work-types"
+import BadgeGroupFromKeys from "../../../ui/badge/badge-group.from-keys"
 
 const modalityIconMap = {
   onsite: Building,
@@ -54,17 +54,14 @@ export default function WorkExperienceCard({
 
         {/* Contenido */}
         <div className={`flex-1 ${textAlign}`}>
-          {/* Empresa */}
           <h3 className="text-xl md:text-2xl font-bold text-foreground">
             {experience.company}
           </h3>
 
-          {/* Período */}
           <p className="text-sm text-muted-foreground">
             {formatPeriod(experience.period)}
           </p>
 
-          {/* Ubicación + Modalidad */}
           <div
             className={`mt-1 flex flex-col gap-1 text-xs text-muted-foreground ${metaAlign}`}
           >
@@ -88,37 +85,12 @@ export default function WorkExperienceCard({
         {t(experience.description)}
       </p>
 
-      {/* Tecnologías */}
-      <div
-        className={`flex flex-wrap gap-2 ${
-          align === "left" ? "justify-start" : "justify-end"
-        }`}
-      >
-        {experience.technologies.map((tech) => {
-          const Icon =
-            typeof tech.icon === "string"
-              ? (SimpleIcons as any)[tech.icon]
-              : tech.icon
-
-          return (
-            <span
-              key={tech.label}
-              className="
-                flex items-center gap-2
-                px-3 py-1
-                text-xs font-medium
-                rounded-lg
-                bg-sky-100 dark:bg-sky-900/50
-                text-sky-700 dark:text-sky-300
-                border border-sky-200 dark:border-sky-800
-              "
-            >
-              {Icon && <Icon className="text-base" />}
-              {tech.label}
-            </span>
-          )
-        })}
-      </div>
+      {/* Tecnologías → badges */}
+      <BadgeGroupFromKeys
+        keys={experience.technologies}
+        align={align === "left" ? "start" : "end"}
+        gap="sm"
+      />
     </div>
   )
 }

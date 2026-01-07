@@ -1,6 +1,8 @@
 import { useTranslation } from "react-i18next"
 import { MapPin } from "lucide-react"
 
+import BadgeGroupFromKeys from "../../components/ui/badge/badge-group.from-keys"
+
 export default function ProfileCard() {
   const { t } = useTranslation()
 
@@ -33,26 +35,18 @@ export default function ProfileCard() {
           Lucas Matías Santander
         </h2>
 
-        {/* Tags */}
-        <div className="flex flex-wrap justify-center gap-2">
-          {(t("pages.links.profile.tags", { returnObjects: true }) as string[]).map(
-            (tag, index) => (
-              <span
-                key={index}
-                className="
-                  rounded-full
-                  border border-border
-                  bg-background/70
-                  px-3 py-1
-                  text-sm font-medium
-                  text-foreground
-                "
-              >
-                {tag}
-              </span>
-            )
-          )}
-        </div>
+        {/* Badges */}
+        <BadgeGroupFromKeys
+          align="center"
+          gap="sm"
+          keys={[
+            "fullstack",
+            "frontend",
+            "backend",
+            "react",
+            "node",
+          ]}
+        />
 
         {/* Ubicación */}
         <div className="flex items-center gap-2 text-muted-foreground">

@@ -4,25 +4,6 @@ export type TechItem = {
   icon?: React.ElementType
 }
 
-export type WorkModality = "onsite" | "remote" | "hybrid"
-
-export type WorkExperience = {
-  id: string
-  company: string
-  period: {
-    start: string
-    end: string
-  }
-  ubication: string
-  modality: WorkModality
-  description: string
-  technologies: Array<{
-    label: string
-    icon?: React.ElementType | string
-  }>
-  logo?: string
-}
-
 export type Project = {
   id: string
   title: string
@@ -35,4 +16,3 @@ export type Project = {
     dark: string
   }
 }
-

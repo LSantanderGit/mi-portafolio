@@ -1,4 +1,4 @@
-import skills from "../../locales/skills.json"
+import skills from "../../../locales/skills.json"
 
 export default function SkillsGrid() {
   return (
@@ -70,7 +70,7 @@ export default function SkillsGrid() {
 
               {/* Icon */}
               <img
-                src={`/assets/skills/${skill.icon}`}
+                src={`/assets/icons/${skill.icon}`}
                 alt={skill.name}
                 className="
                   relative z-10
