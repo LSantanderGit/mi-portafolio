@@ -87,6 +87,7 @@ export default function WorkExperienceCard({
 
       {/* Tecnologías → badges */}
       <BadgeGroupFromKeys
+		revealFrom={align}
         keys={experience.technologies}
         align={align === "left" ? "start" : "end"}
         gap="sm"

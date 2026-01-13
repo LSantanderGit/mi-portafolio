@@ -29,7 +29,13 @@ export default function TechRow({ items, direction = "left", speed = 40 }: Props
           ease: "linear",
         }}
       >
-        <BadgeGroupFromKeys keys={duplicatedItems} gap="md" wrap={false} className="whitespace-nowrap" />
+        <BadgeGroupFromKeys
+			keys={duplicatedItems}
+			gap="md"
+			wrap={false}
+			revealFrom={direction === "left" ? "right" : "left"}
+			className="whitespace-nowrap"
+		/>
       </motion.div>
     </div>
   )

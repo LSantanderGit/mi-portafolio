@@ -1,6 +1,5 @@
 import clsx from "clsx"
-import { motion } from "framer-motion"
-import type { Variants } from "framer-motion"
+import { motion, type Variants } from "framer-motion"
 import { useMotion } from "../../providers/motion-provider"
 import Badge from "./badge"
 import type { BadgeGroupProps } from "../../../lib/badges/badge.types"
@@ -17,25 +16,34 @@ const alignClasses = {
   end: "justify-end",
 }
 
+type RevealDirection = "left" | "right"
+
+type Props = BadgeGroupProps & {
+  wrap?: boolean
+  revealFrom?: RevealDirection
+}
+
 const containerVariants: Variants = {
   hidden: {},
-  visible: {
+  visible: (direction: "left" | "right") => ({
     transition: {
-      staggerChildren: 0.1,
+      staggerChildren: 0.06,
+      staggerDirection: direction === "left" ? 1 : -1,
+      delayChildren: 0.05,
     },
-  },
+  }),
 }
 
 const itemVariants: Variants = {
-  hidden: {
+  hidden: (direction: "left" | "right") => ({
     opacity: 0,
-    y: 8,
-  },
+    x: direction === "left" ? -6 : 6,
+  }),
   visible: {
     opacity: 1,
-    y: 0,
+    x: 0,
     transition: {
-      duration: 0.25,
+      duration: 0.2,
       ease: [0.16, 1, 0.3, 1],
     },
   },
@@ -47,10 +55,13 @@ export default function BadgeGroup({
   align = "start",
   className,
   wrap = true,
-}: BadgeGroupProps & { wrap?: boolean }) {
+  revealFrom = "left",
+}: BadgeGroupProps & {
+  wrap?: boolean
+  revealFrom?: "left" | "right"
+}) {
   const { animationsEnabled } = useMotion()
 
-  // 🔕 Sin animaciones
   if (!animationsEnabled) {
     return (
       <div
@@ -69,12 +80,13 @@ export default function BadgeGroup({
     )
   }
 
-  // ✨ Con animaciones
   return (
     <motion.div
+      custom={revealFrom}
       variants={containerVariants}
       initial="hidden"
-      animate="visible"
+      whileInView="visible"
+      viewport={{ once: true, margin: "-40px" }}
       className={clsx(
         "flex items-center",
         wrap ? "flex-wrap" : "flex-nowrap",
@@ -84,7 +96,11 @@ export default function BadgeGroup({
       )}
     >
       {badges.map((badge, index) => (
-        <motion.div key={index} variants={itemVariants}>
+        <motion.div
+          key={index}
+          custom={revealFrom}
+          variants={itemVariants}
+        >
           <Badge {...badge} />
         </motion.div>
       ))}
