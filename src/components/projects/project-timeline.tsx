@@ -1,5 +1,11 @@
 import ProjectItem from "./project-item"
-import projects from "../../locales/projects.json"
+import rawProjects from "../../locales/projects.json"
+import type { Project } from "./project-types"
+const projects: Project[] = rawProjects.map((p) => ({
+	...p,
+	tech: p.tech as Project["tech"],
+}))
+
 
 export default function ProjectsTimeline() {
   return (

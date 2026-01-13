@@ -1,16 +1,11 @@
-import type React from "react"
-export type TechItem = {
-  label: string
-  icon?: React.ElementType
-}
+import type { BadgeKey } from "../../lib/badges/badge.types"
 
 export type Project = {
   id: string
   title: string
   description: string
   images: string[]
-  tech: string[]
-  link?: string
+  tech: BadgeKey[]
   color: {
     light: string
     dark: string

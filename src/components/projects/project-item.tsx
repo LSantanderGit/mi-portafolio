@@ -1,8 +1,9 @@
 import Reveal from "../ui/reveal"
 import ProjectCarousel from "./project-carousel"
 import ProjectHoverFx from "./project-hover-fx"
+import BadgeGroupFromKeys from "../ui/badge/badge-group.from-keys"
 import { cn } from "../../lib/utils"
-import type { Project } from "../../types"
+import type { Project } from "./project-types"
 
 type Props = {
   project: Project
@@ -39,17 +40,13 @@ export default function ProjectItem({ project, align, delay }: Props) {
               <ProjectCarousel images={project.images} />
 
               {/* Overlay */}
-              <div
-                className="
-                  absolute inset-0
-                  flex items-end
-                  bg-gradient-to-t from-black/60 via-black/20 to-transparent
-                  opacity-0 group-hover:opacity-100
-                  transition-opacity duration-300
-                  p-4
-                  pointer-events-none
-                "
-              >
+              <div className="
+                absolute inset-0 flex items-end
+                bg-gradient-to-t from-black/60 via-black/20 to-transparent
+                opacity-0 group-hover:opacity-100
+                transition-opacity duration-300
+                p-4 pointer-events-none
+              ">
                 <p className="text-sm text-white">
                   {project.description}
                 </p>
@@ -61,7 +58,7 @@ export default function ProjectItem({ project, align, delay }: Props) {
         {/* TEXTO */}
         <div
           className={cn(
-            "space-y-4 max-w-md order-2 text-left",
+            "space-y-4 max-w-md order-2",
             isLeft
               ? "md:order-1 md:ml-auto md:text-right"
               : "md:order-2 md:mr-auto md:text-left"
@@ -75,21 +72,11 @@ export default function ProjectItem({ project, align, delay }: Props) {
             {project.description}
           </p>
 
-          <div
-            className={cn(
-              "flex flex-wrap gap-2",
-              isLeft ? "md:justify-end" : "md:justify-start"
-            )}
-          >
-            {project.tech.map((t) => (
-              <span
-                key={t}
-                className="rounded-full border px-3 py-1 text-xs"
-              >
-                {t}
-              </span>
-            ))}
-          </div>
+          <BadgeGroupFromKeys
+            keys={project.tech}
+            gap="sm"
+            align={isLeft ? "end" : "start"}
+          />
         </div>
       </div>
     </Reveal>
