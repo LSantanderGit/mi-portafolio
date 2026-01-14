@@ -16,13 +16,6 @@ const alignClasses = {
   end: "justify-end",
 }
 
-type RevealDirection = "left" | "right"
-
-type Props = BadgeGroupProps & {
-  wrap?: boolean
-  revealFrom?: RevealDirection
-}
-
 const containerVariants: Variants = {
   hidden: {},
   visible: (direction: "left" | "right") => ({
