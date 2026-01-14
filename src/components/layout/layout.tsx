@@ -23,7 +23,7 @@ function Layout() {
 			exit={{ opacity: 0 }}
 			transition={{
 			duration: 0.25,
-			ease: "easeInOut",
+			ease: [0.4, 0, 0.2, 1],
 			}}
 			className="grow"
 		>
