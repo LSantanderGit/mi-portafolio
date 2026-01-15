@@ -1,10 +1,16 @@
 import { useState } from "react"
 import { useTranslation } from "react-i18next"
 import { Send } from "lucide-react"
+import emailjs from "@emailjs/browser"
 
-const MAX_EMAIL = 100
-const MAX_SUBJECT = 120
-const MAX_MESSAGE = 1000
+// Configuración de EmailJS y límites
+const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID
+const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
+const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+const MAX_EMAIL = Number(import.meta.env.VITE_MAX_EMAIL) || 100
+const MAX_SUBJECT = Number(import.meta.env.VITE_MAX_SUBJECT) || 120
+const MAX_MESSAGE = Number(import.meta.env.VITE_MAX_MESSAGE) || 1000
+
 
 export default function ContactForm() {
   const { t } = useTranslation()
@@ -18,25 +24,41 @@ export default function ContactForm() {
   const isValidEmail = (value: string) =>
     /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
+  const handleSubmit = async (e: React.FormEvent) => {
+	e.preventDefault()
 
-    const newErrors: typeof errors = {}
+	const newErrors: typeof errors = {}
 
-    if (!isValidEmail(email)) {
-      newErrors.email = t("pages.links.form.errors.invalidEmail")
-    }
+	if (!isValidEmail(email)) {
+		newErrors.email = t("pages.links.form.errors.invalidEmail")
+	}
 
-    setErrors(newErrors)
-    if (Object.keys(newErrors).length > 0) return
+	setErrors(newErrors)
+	if (Object.keys(newErrors).length > 0) return
+		console.log("Sending email...", { email, subject, message })
+		console.log("Using EmailJS with:", { SERVICE_ID, TEMPLATE_ID, PUBLIC_KEY })
 
-    const mailto = `mailto:lucas.santander.dev@gmail.com?subject=${encodeURIComponent(
-      subject
-    )}&body=${encodeURIComponent(`From: ${email}\n\n${message}`)}`
+		try {
+			await emailjs.send(
+				SERVICE_ID,
+				TEMPLATE_ID,
+				{
+					name: email.split("@")[0],
+					title: subject,
+					email: email,
+					message: message,
+				},
+				PUBLIC_KEY
+			)
 
-    window.location.href = mailto
-    setSubmitted(true)
-  }
+			setSubmitted(true)
+			setEmail("")
+			setSubject("")
+			setMessage("")
+		} catch (error) {
+			console.error("Email error:", error)
+		}
+	}
 
   return (
     <div
