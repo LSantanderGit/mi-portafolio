@@ -11,7 +11,7 @@ export const BADGE_REGISTRY: Record<BadgeKey, BadgeDefinition> = {
 	},
 	tailwind: {
 		label: "Tailwind CSS",
-		icon: "tailwind.svg",
+		icon: "tailwind.png",
 	},
 	node: {
 		label: "Node.js",
