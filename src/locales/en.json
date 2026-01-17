@@ -124,7 +124,19 @@
         "success": "Your message has been sent successfully!",
         "error": "There was an error sending your message. Please try again later."
       }
-    }
+    },
+	"tools": {
+		"title": {
+			"part1": "My ",
+			"part2": "Tool Stack"
+		},
+		"description": "Technologies and tools I use",
+		"hardware": {
+			"title": "Hardware",
+			"description": "My main development hardware setups",
+			"touchHint": "Touch"
+		}
+	}
   },
   "experience": {
     "exp1": {

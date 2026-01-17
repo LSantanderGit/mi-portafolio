@@ -1,0 +1,27 @@
+[
+  {
+    "id": "desktop",
+    "type": "Desktop PC",
+    "name": "Workstation Principal",
+    "image": "/hardware/desktop.png",
+    "specs": [
+      { "label": "CPU", "value": "Intel i5 13th Gen" },
+      { "label": "GPU", "value": "RTX 4070 Super" },
+      { "label": "RAM", "value": "32GB DDR5" },
+      { "label": "Storage", "value": "NVMe SSD + HDD" },
+      { "label": "OS", "value": "Linux / Windows" }
+    ]
+  },
+  {
+    "id": "laptop",
+    "type": "Laptop",
+    "name": "Notebook",
+    "image": "/hardware/laptop.png",
+    "specs": [
+      { "label": "CPU", "value": "Intel i7" },
+      { "label": "RAM", "value": "16GB" },
+      { "label": "Storage", "value": "SSD" },
+      { "label": "OS", "value": "Linux" }
+    ]
+  }
+]

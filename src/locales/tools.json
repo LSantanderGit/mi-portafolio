@@ -1,0 +1,110 @@
+[
+  {
+    "id": "ide",
+    "category": "Editor & IDE",
+    "items": [
+      {
+        "id": "vscode",
+        "name": "VS Code",
+        "description": "Editor principal",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
+      },
+      {
+        "id": "cursor",
+        "name": "Cursor",
+        "description": "AI-powered coding",
+        "icon": "https://www.cursor.com/brand/icon.svg"
+      }
+    ]
+  },
+  {
+    "id": "browsers",
+    "category": "Navegadores",
+    "items": [
+      {
+        "id": "zen",
+        "name": "Zen Browser",
+        "description": "Navegador principal",
+        "icon": "https://zen-browser.app/logo.svg"
+      },
+      {
+        "id": "arc",
+        "name": "Arc",
+        "description": "Navegador secundario",
+        "icon": "https://arc.net/favicon.png"
+      }
+    ]
+  },
+  {
+    "id": "versioning",
+    "category": "Control de Versiones",
+    "items": [
+      {
+        "id": "git",
+        "name": "Git",
+        "description": "Version control",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+      },
+      {
+        "id": "github",
+        "name": "GitHub",
+        "description": "Repositorios & CI/CD",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+      }
+    ]
+  },
+  {
+    "id": "design",
+    "category": "Diseño",
+    "items": [
+      {
+        "id": "figma",
+        "name": "Figma",
+        "description": "UI / UX Design",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
+      },
+      {
+        "id": "canva",
+        "name": "Canva",
+        "description": "Quick graphics",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg"
+      }
+    ]
+  },
+  {
+    "id": "dev",
+    "category": "Desarrollo",
+    "items": [
+      {
+        "id": "node",
+        "name": "Node.js",
+        "description": "Runtime",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+      },
+      {
+        "id": "docker",
+        "name": "Docker",
+        "description": "Containers",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+      }
+    ]
+  },
+  {
+    "id": "productivity",
+    "category": "Productividad",
+    "items": [
+      {
+        "id": "notion",
+        "name": "Notion",
+        "description": "Notes & docs",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/notion/notion-original.svg"
+      },
+      {
+        "id": "slack",
+        "name": "Slack",
+        "description": "Comunicación",
+        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/slack/slack-original.svg"
+      }
+    ]
+  }
+]
