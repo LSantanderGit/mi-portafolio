@@ -34,7 +34,7 @@ export default function TechRow({ items, direction = "left", speed = 40 }: Props
 			gap="md"
 			wrap={false}
 			revealFrom={direction === "left" ? "right" : "left"}
-			className="whitespace-nowrap"
+			className="flex w-max flex-nowrap"
 		/>
       </motion.div>
     </div>
