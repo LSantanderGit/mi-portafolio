@@ -11,32 +11,33 @@ type Props = {
 }
 
 export default function TechRow({ items, direction = "left", speed = 40 }: Props) {
-  const from = direction === "left" ? "0%" : "-100%"
-  const to = direction === "left" ? "-100%" : "0%"
+  const from = direction === "left" ? "0%" : "-50%"
+  const to = direction === "left" ? "-50%" : "0%"
 
-  const duplicatedItems = [...items, ...items, ...items, ...items]
+  const duplicatedItems = [...items, ...items]
 
   return (
     <div className="overflow-hidden">
       <motion.div
-        className="py-2"
+        className="py-2 flex w-max"
         initial={{ x: from }}
         animate={{ x: to }}
         transition={{
-          repeat: Number.POSITIVE_INFINITY,
+          repeat: Infinity,
           repeatType: "loop",
           duration: speed,
           ease: "linear",
         }}
       >
         <BadgeGroupFromKeys
-			keys={duplicatedItems}
-			gap="md"
-			wrap={false}
-			revealFrom={direction === "left" ? "right" : "left"}
-			className="flex w-max flex-nowrap"
-		/>
+          keys={duplicatedItems}
+          gap="md"
+          wrap={false}
+          revealFrom={direction === "left" ? "right" : "left"}
+          className="flex w-max flex-nowrap"
+        />
       </motion.div>
     </div>
   )
 }
+
