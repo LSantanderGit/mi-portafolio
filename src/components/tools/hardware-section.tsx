@@ -1,4 +1,4 @@
-import hardware from "../../locales/hardware.json"
+import hardware from "@/locales/hardware.json"
 import HardwareCard from "./hardware-card"
 
 export default function HardwareSection() {

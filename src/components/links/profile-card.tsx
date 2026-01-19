@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next"
 import { MapPin } from "lucide-react"
 
-import BadgeGroupFromKeys from "../../components/ui/badge/badge-group.from-keys"
+import BadgeGroupFromKeys from "@/components/ui/badge/badge-group.from-keys"
 
 export default function ProfileCard() {
   const { t } = useTranslation()

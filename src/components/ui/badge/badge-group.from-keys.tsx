@@ -1,7 +1,7 @@
 import type React from "react"
 import BadgeGroup from "./badge-group"
-import { resolveBadges } from "../../../lib/badges/badge.helpers"
-import type { BadgeKey } from "../../../lib/badges/badge.types"
+import { resolveBadges } from "@/lib/badges/badge.helpers"
+import type { BadgeKey } from "@/lib/badges/badge.types"
 
 type Props = {
   keys: BadgeKey[]

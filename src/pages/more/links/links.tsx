@@ -1,11 +1,11 @@
 import { useTranslation } from "react-i18next"
 
-import PageTitle from "../../../components/ui/page-title"
-import Reveal from "../../../components/ui/reveal"
+import PageTitle from "@/components/ui/page-title"
+import Reveal from "@/components/ui/reveal"
 
-import ProfileCard from "../../../components/links/profile-card"
-import ContactLinksCard from "../../../components/links/contact-links-card"
-import ContactForm from "../../../components/links/contact-form"
+import ProfileCard from "@/components/links/profile-card"
+import ContactLinksCard from "@/components/links/contact-links-card"
+import ContactForm from "@/components/links/contact-form"
 
 function Links() {
   const { t } = useTranslation()

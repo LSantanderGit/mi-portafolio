@@ -1,5 +1,5 @@
 import clsx from "clsx"
-import type { BadgeProps } from "../../../lib/badges/badge.types"
+import type { BadgeProps } from "@/lib/badges/badge.types"
 
 const sizeClasses = {
   sm: "h-6 px-2 text-xs gap-1",

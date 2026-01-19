@@ -1,8 +1,8 @@
 "use client"
 
 import { motion } from "framer-motion"
-import type { BadgeKey } from "../../../lib/badges/badge.types"
-import BadgeGroupFromKeys from "../../../components/ui/badge/badge-group.from-keys"
+import type { BadgeKey } from "@/lib/badges/badge.types"
+import BadgeGroupFromKeys from "@/components/ui/badge/badge-group.from-keys"
 
 type Props = {
   items: BadgeKey[]

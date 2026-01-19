@@ -1,5 +1,5 @@
-import tools from "../../locales/tools.json"
-import GlassCard from "../../components/ui/glass-card"
+import tools from "@/locales/tools.json"
+import GlassCard from "@/components/ui/glass-card"
 
 export default function ToolsSection() {
   return (

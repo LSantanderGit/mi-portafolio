@@ -2,7 +2,7 @@ import clsx from "clsx"
 import { motion, type Variants } from "framer-motion"
 import { useMotion } from "../../providers/motion-provider"
 import Badge from "./badge"
-import type { BadgeGroupProps } from "../../../lib/badges/badge.types"
+import type { BadgeGroupProps } from "@/lib/badges/badge.types"
 
 const gapClasses = {
   sm: "gap-1.5",

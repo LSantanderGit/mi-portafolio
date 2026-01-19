@@ -2,8 +2,8 @@
 
 import { useMemo } from "react"
 import TechRow from "./tech-row"
-import { techStack } from "../../../locales/tech-stacks"
-import { shuffleArray } from "../../../utils/shuffle"
+import { techStack } from "@/locales/tech-stacks"
+import { shuffleArray } from "@/utils/shuffle"
 
 const ITEMS_PER_ROW = 8
 const NUMBER_OF_ROWS = 4

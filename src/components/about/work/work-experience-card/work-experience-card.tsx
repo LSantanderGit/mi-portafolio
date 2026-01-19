@@ -2,7 +2,7 @@
 
 import { MapPin, Laptop, Users, Building } from "lucide-react"
 import type { WorkExperience } from "../work-types"
-import BadgeGroupFromKeys from "../../../ui/badge/badge-group.from-keys"
+import BadgeGroupFromKeys from "@/components/ui/badge/badge-group.from-keys"
 
 const modalityIconMap = {
   onsite: Building,

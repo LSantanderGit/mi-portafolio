@@ -1,4 +1,4 @@
-import type { BadgeKey } from "../../../lib/badges/badge.types"
+import type { BadgeKey } from "@/lib/badges/badge.types"
 
 export type WorkModality = "onsite" | "remote" | "hybrid"
 

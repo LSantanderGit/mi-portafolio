@@ -9,7 +9,7 @@ import {
   FaLinkedin,
 } from "react-icons/fa"
 
-import contactsData from "../../locales/contacts.json"
+import contactsData from "@/locales/contacts.json"
 
 /* =======================
    ICON MAP

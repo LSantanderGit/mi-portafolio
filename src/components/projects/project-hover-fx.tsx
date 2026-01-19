@@ -1,5 +1,5 @@
 import { useRef } from "react"
-import { cn } from "../../lib/utils"
+import { cn } from "@/lib/utils"
 
 type Props = {
   children: React.ReactNode

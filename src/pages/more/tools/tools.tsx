@@ -1,9 +1,9 @@
 import { useTranslation } from "react-i18next"
 
-import PageTitle from "../../../components/ui/page-title"
-import Reveal from "../../../components/ui/reveal"
-import HardwareSection from "../../../components/tools/hardware-section"
-import ToolsSection from "../../../components/tools/tools-section"
+import PageTitle from "@/components/ui/page-title"
+import Reveal from "@/components/ui/reveal"
+import HardwareSection from "@/components/tools/hardware-section"
+import ToolsSection from "@/components/tools/tools-section"
 
 function Tools() {
   const { t } = useTranslation()

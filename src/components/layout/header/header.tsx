@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 
 import NavMenu from "./nav-menu";
 import MobileMenu from "./mobile-menu";
-import SettingsButton from "../../ui/settings-button";
+import SettingsButton from "@/components/ui/settings-button";
 
 export default function Header() {
   const { t } = useTranslation();

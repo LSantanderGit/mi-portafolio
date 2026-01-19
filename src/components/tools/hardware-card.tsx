@@ -3,7 +3,7 @@
 import { useState } from "react"
 import { useTranslation } from "react-i18next"
 
-import GlassCard from "../../components/ui/glass-card"
+import GlassCard from "@/components/ui/glass-card"
 
 type Spec = {
   label: string

@@ -1,4 +1,4 @@
-import skills from "../../../locales/skills.json"
+import skills from "@/locales/skills.json"
 
 export default function SkillsGrid() {
   return (

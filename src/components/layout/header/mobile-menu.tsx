@@ -4,7 +4,7 @@ import {
   SheetContent,
   SheetHeader,
   SheetTitle,
-} from "../../ui/sheet";
+} from "@/components/ui/sheet";
 
 import type { RouteItem, MoreRouteItem } from "./types";
 

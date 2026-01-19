@@ -1,8 +1,8 @@
-import Reveal from "../ui/reveal"
+import Reveal from "@/components/ui/reveal"
 import ProjectCarousel from "./project-carousel"
 import ProjectHoverFx from "./project-hover-fx"
-import BadgeGroupFromKeys from "../ui/badge/badge-group.from-keys"
-import { cn } from "../../lib/utils"
+import BadgeGroupFromKeys from "@/components/ui/badge/badge-group.from-keys"
+import { cn } from "@/lib/utils"
 import type { Project } from "./project-types"
 
 type Props = {

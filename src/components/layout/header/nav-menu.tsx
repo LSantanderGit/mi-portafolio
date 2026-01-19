@@ -9,9 +9,9 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   NavigationMenuContent,
-} from "../../ui/navigation-menu";
+} from "@/components/ui/navigation-menu";
 
-import useIsMobile from "../../../hooks/use-mobile";
+import useIsMobile from "@/hooks/use-mobile";
 import type { RouteItem, MoreRouteItem } from "./types";
 
 type Props = {

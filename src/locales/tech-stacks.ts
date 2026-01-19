@@ -1,5 +1,5 @@
 // locales/tech-stacks.ts
-import type { BadgeKey } from "../lib/badges/badge.types"
+import type { BadgeKey } from "@/lib/badges/badge.types"
 
 export const techStack: BadgeKey[] = [
   "javascript",

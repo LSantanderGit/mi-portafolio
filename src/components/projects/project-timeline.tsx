@@ -1,5 +1,5 @@
 import ProjectItem from "./project-item"
-import rawProjects from "../../locales/projects.json"
+import rawProjects from "@/locales/projects.json"
 import type { Project } from "./project-types"
 const projects: Project[] = rawProjects.map((p) => ({
 	...p,

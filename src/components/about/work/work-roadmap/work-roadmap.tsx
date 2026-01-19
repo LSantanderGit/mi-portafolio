@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react"
 import { useTranslation } from "react-i18next"
 import type { WorkExperience } from "../work-types"
-import workData from "../../../../locales/work-experience.json"
+import workData from "@/locales/work-experience.json"
 import WorkExperienceCard from "../work-experience-card/work-experience-card"
 
 export default function WorkRoadmap() {
