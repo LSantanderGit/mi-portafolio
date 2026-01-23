@@ -5,6 +5,7 @@ import Badge from "./badge"
 import type { BadgeGroupProps } from "@/lib/badges/badge.types"
 
 const gapClasses = {
+  xs: "gap-1.0",
   sm: "gap-1.5",
   md: "gap-2",
   lg: "gap-3",
@@ -49,9 +50,11 @@ export default function BadgeGroup({
   className,
   wrap = true,
   revealFrom = "left",
+  size,
 }: BadgeGroupProps & {
   wrap?: boolean
   revealFrom?: "left" | "right"
+  size?: "xs" | "sm" | "md" | "lg"
 }) {
   const { animationsEnabled } = useMotion()
 
@@ -67,7 +70,7 @@ export default function BadgeGroup({
         )}
       >
         {badges.map((badge, index) => (
-          <Badge key={index} {...badge} />
+          <Badge key={index} {...badge} size={size || badge.size} />
         ))}
       </div>
     )
@@ -94,7 +97,7 @@ export default function BadgeGroup({
           custom={revealFrom}
           variants={itemVariants}
         >
-          <Badge {...badge} />
+          <Badge {...badge} size={size || badge.size} />
         </motion.div>
       ))}
     </motion.div>

@@ -1,14 +1,14 @@
 export type BadgeProps = {
 	label: string
 	icon?: string // nombre del archivo en /public/assets/icons
-	size?: "sm" | "md" | "lg"
+	size?: "xs" | "sm" | "md" | "lg"
 	variant?: "default" | "secondary" | "outline" | "code"
 	className?: string
 }
 
 export type BadgeGroupProps = {
 	badges: BadgeProps[]
-	gap?: "sm" | "md" | "lg"
+	gap?: "xs" | "sm" | "md" | "lg"
 	align?: "start" | "center" | "end"
 	className?: string
 }

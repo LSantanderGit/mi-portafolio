@@ -131,6 +131,7 @@ export default function MosaicSection() {
                 badges={resolvedBadges.slice(0, 4)} 
                 gap="sm"
                 wrap={true}
+                size="sm"
               />
             </div>
           </MosaicItem>
