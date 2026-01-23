@@ -7,15 +7,27 @@ import { useTranslation } from "react-i18next"
 import { useMotion } from "@/components/providers/motion-provider"
 import GlassCard from "@/components/ui/glass-card"
 import { Link } from "react-router-dom"
-import { ArrowRight, Mail, Github, Linkedin, MessageCircle } from "lucide-react"
+import { ArrowRight, Mail, ExternalLink } from "lucide-react"
+import {
+  FaPhone,
+  FaWhatsapp,
+  FaTelegram,
+  FaGithub,
+  FaLinkedin,
+} from "react-icons/fa"
 import contacts from "@/locales/contacts.json"
+import IconContainer from "@/components/ui/icon-container"
 
-const iconMap: Record<string, React.ReactNode> = {
-  mail: <Mail className="w-5 h-5" />,
-  github: <Github className="w-5 h-5" />,
-  linkedin: <Linkedin className="w-5 h-5" />,
-  whatsapp: <MessageCircle className="w-5 h-5" />,
-  telegram: <MessageCircle className="w-5 h-5" />,
+type IconType = React.ComponentType<{ className?: string }>
+
+const iconMap: Record<string, IconType> = {
+  phone: FaPhone,
+  mail: Mail,
+  whatsapp: FaWhatsapp,
+  telegram: FaTelegram,
+  github: FaGithub,
+  linkedin: FaLinkedin,
+  external: ExternalLink,
 }
 
 // Get main contact links
@@ -59,18 +71,27 @@ export default function ContactCTA() {
                 <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
                   {/* Quick contact icons */}
                   <div className="flex items-center gap-2">
-                    {mainContacts.map((contact) => (
-                      <a
-                        key={contact.id}
-                        href={contact.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="p-3 rounded-xl bg-secondary/50 border border-border text-foreground hover:bg-secondary hover:border-foreground/20 transition-all duration-300"
-                        aria-label={contact.id}
-                      >
-                        {iconMap[contact.icon] || <Mail className="w-5 h-5" />}
-                      </a>
-                    ))}
+                    {mainContacts.map((contact) => {
+                      const Icon = iconMap[contact.icon] || ExternalLink
+                      
+                      return (
+                        <a
+                          key={contact.id}
+                          href={contact.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="group rounded-xl bg-secondary/50 border border-border hover:bg-secondary hover:border-foreground/20 transition-all duration-300"
+                          aria-label={contact.id}
+                        >
+                          <IconContainer 
+                            icon={Icon}
+                            variant="hover-primary"
+                            size="md"
+                            className="bg-transparent border-0"
+                          />
+                        </a>
+                      )
+                    })}
                   </div>
 
                   {/* Main CTA */}

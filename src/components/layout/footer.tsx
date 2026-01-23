@@ -1,6 +1,22 @@
 import { useTranslation } from "react-i18next";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
-import { SiGmail } from "react-icons/si";
+import { Mail, ExternalLink } from "lucide-react";
+import IconContainer from "@/components/ui/icon-container";
+import contacts from "@/locales/contacts.json";
+
+type IconType = React.ComponentType<{ className?: string }>
+
+const iconMap: Record<string, IconType> = {
+  github: FaGithub,
+  linkedin: FaLinkedin,
+  mail: Mail,
+  external: ExternalLink,
+}
+
+// Get main contact links (same as contact-cta)
+const socialLinks = contacts.contacts.filter(c => 
+  ["email", "github", "linkedin"].includes(c.id)
+)
 
 export default function Footer() {
   const { t } = useTranslation();
@@ -64,16 +80,28 @@ export default function Footer() {
               © {new Date().getFullYear()} Lucas Matías Santander. {t("footer.rights")}
             </p>
 
-            <div className="flex gap-4 text-muted-foreground">
-				<a href="https://github.com/LSantanderGit" aria-label="GitHub" className="hover:text-foreground transition-colors">
-					<FaGithub className="h-5 w-5" />
-				</a>
-				<a href="https://www.linkedin.com/in/lucas-mat%C3%ADas-santander-99a974274/" aria-label="LinkedIn" className="hover:text-foreground transition-colors">
-					<FaLinkedin className="h-5 w-5" />
-				</a>
-				<a href="mailto:lucas.santander.dev@gmail.com" aria-label="Email" className="hover:text-foreground transition-colors">
-					<SiGmail className="h-5 w-5" />
-				</a>
+            <div className="flex gap-3">
+              {socialLinks.map((contact) => {
+                const Icon = iconMap[contact.icon] || ExternalLink
+                
+                return (
+                  <a
+                    key={contact.id}
+                    href={contact.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={contact.id}
+                    className="group transition-all duration-300"
+                  >
+                    <IconContainer 
+                      icon={Icon}
+                      variant="static"
+                      size="md"
+                      className="text-muted-foreground group-hover:text-foreground group-hover:bg-primary/10"
+                    />
+                  </a>
+                )
+              })}
             </div>
           </div>
 
