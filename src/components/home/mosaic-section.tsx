@@ -17,6 +17,7 @@ import {
 import { techStack } from "@/locales/tech-stacks"
 import { resolveBadges } from "@/lib/badges/badge.helpers"
 import projects from "@/locales/projects.json"
+import BadgeGroup from "@/components/ui/badge/badge-group"
 
 const topTechStack = techStack.slice(0, 6)
 const resolvedBadges = resolveBadges(topTechStack)
@@ -125,15 +126,12 @@ export default function MosaicSection() {
             href="/tools"
             delay={0.3}
           >
-            <div className="flex flex-wrap gap-1.5 mt-2">
-              {resolvedBadges.slice(0, 4).map((badge) => (
-                <span 
-                  key={badge.label}
-                  className="inline-flex items-center gap-1 px-2 py-1 text-xs rounded-md bg-secondary/50 text-secondary-foreground"
-                >
-                  {badge.label}
-                </span>
-              ))}
+            <div className="mt-2">
+              <BadgeGroup 
+                badges={resolvedBadges.slice(0, 4)} 
+                gap="sm"
+                wrap={true}
+              />
             </div>
           </MosaicItem>
 
