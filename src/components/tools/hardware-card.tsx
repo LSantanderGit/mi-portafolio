@@ -15,15 +15,16 @@ type Props = {
   type: string
   image: string
   specs: Spec[]
+  className?: string
 }
 
-export default function HardwareCard({ name, type, image, specs }: Props) {
+export default function HardwareCard({ name, type, image, specs, className }: Props) {
   const [open, setOpen] = useState(false)
   const { t } = useTranslation()
 
   return (
     <GlassCard
-      className="group aspect-[4/3] cursor-pointer"
+      className={`group aspect-[4/3] w-full cursor-pointer ${className ?? ""}`}
       onClick={() => setOpen((v) => !v)}
     >
       {/* IMAGE */}
@@ -59,7 +60,7 @@ export default function HardwareCard({ name, type, image, specs }: Props) {
       {/* SPECS OVERLAY */}
       <div
         className={`
-          absolute inset-0 p-6
+          absolute inset-0 p-4 md:p-6
           flex flex-col justify-center
           opacity-0 translate-y-4
           transition-all duration-500
@@ -67,23 +68,25 @@ export default function HardwareCard({ name, type, image, specs }: Props) {
           ${open ? "opacity-100 translate-y-0" : ""}
         `}
       >
-        <div className="mb-4">
+        <div className="mb-3 md:mb-4">
           <p className="text-xs uppercase tracking-wider text-primary">
             {type}
           </p>
-          <h3 className="text-xl font-bold">{name}</h3>
+          <h3 className="text-lg md:text-xl font-bold leading-tight">
+            {name}
+          </h3>
         </div>
 
-        <div className="space-y-2">
+        <div className="space-y-1.5 md:space-y-2">
           {specs.map((spec) => (
             <div
               key={spec.label}
-              className="flex justify-between border-b border-border/30 py-1.5 last:border-0"
+              className="flex items-start justify-between border-b border-border/30 py-1 md:py-1.5 last:border-0 gap-3"
             >
-              <span className="text-sm text-muted-foreground">
-                {spec.label}
+              <span className="text-xs md:text-sm text-muted-foreground flex-shrink-0 min-w-0">
+                {spec.label}:
               </span>
-              <span className="text-sm font-medium">
+              <span className="text-xs md:text-sm font-medium text-right leading-relaxed break-words min-w-0 flex-1">
                 {spec.value}
               </span>
             </div>
@@ -93,7 +96,7 @@ export default function HardwareCard({ name, type, image, specs }: Props) {
 
       {/* MOBILE HINT */}
       <div className="absolute top-3 right-3 md:hidden text-xs text-muted-foreground">
-        	{t("tools.hardware.touchHint")}
+		{t("pages.tools.hardware.touchHint")}
       </div>
     </GlassCard>
   )

@@ -8,20 +8,34 @@
       { "label": "CPU", "value": "Intel i5 13th Gen" },
       { "label": "GPU", "value": "RTX 4070 Super" },
       { "label": "RAM", "value": "32GB DDR5" },
-      { "label": "Storage", "value": "NVMe SSD + HDD" },
-      { "label": "OS", "value": "Linux / Windows" }
+      { "label": "Storage", "value": "NVMe SSD" },
+      { "label": "OS", "value": "Zorin OS / Windows" }
     ]
   },
   {
-    "id": "laptop",
+    "id": "laptop1",
     "type": "Laptop",
-    "name": "Notebook",
-    "image": "/hardware/laptop.png",
+    "name": "Dell G15 5520",
+    "image": "/hardware/dellG15.png",
     "specs": [
-      { "label": "CPU", "value": "Intel i7" },
-      { "label": "RAM", "value": "16GB" },
-      { "label": "Storage", "value": "SSD" },
-      { "label": "OS", "value": "Linux" }
+		{ "label": "CPU", "value": "Intel® Core™ i7-12700H 12 gen. (24 MB caché, 14 Cores, 4,70 GHz)" },
+		{ "label": "GPU", "value": "NVIDIA® GeForce® RTX™ 3060, 6 GB, GDDR6" },
+		{ "label": "RAM", "value": "32 GB, 2 x 16 GB, DDR5, 4800 MHz" },
+		{ "label": "Storage", "value": "SSD M.2 2280, PCIe NVMe 4 gen. x4 1 TB" },
+		{ "label": "OS", "value": "Pop!_OS" }
     ]
+  },
+  {
+	"id":"laptop2",
+	"type": "Laptop",
+	"name": "Lenovo Legion 5",
+	"image": "/hardware/lenovoLegion5.png",
+	"specs": [
+		{ "label": "CPU", "value": "Intel i7-13700H" },
+		{ "label": "GPU", "value": "RTX 4060" },
+		{ "label": "RAM", "value": "32GB DDR5" },
+		{ "label": "Storage", "value": "SSD" },
+		{ "label": "OS", "value": "Windows 11" }
+	]
   }
 ]
