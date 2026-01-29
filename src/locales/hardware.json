@@ -5,10 +5,10 @@
     "name": "Workstation Principal",
     "image": "/hardware/desktop.png",
     "specs": [
-      { "label": "CPU", "value": "Intel i5 13th Gen" },
-      { "label": "GPU", "value": "RTX 4070 Super" },
-      { "label": "RAM", "value": "32GB DDR5" },
-      { "label": "Storage", "value": "NVMe SSD" },
+      { "label": "CPU", "value": "Intel® Core™ i5-13600k gen. (24 MB caché, 14 Cores, 5,10 GHz)" },
+      { "label": "GPU", "value": "NVIDIA® GeForce® RTX™ 4070 Super, 12GB, GDDR6X" },
+      { "label": "RAM", "value": "32 GB, 2 x 16 GB, DDR5, 5600 MHz" },
+      { "label": "Storage", "value": "SSD M.2 SN850X, PCIe NVMe 4 gen. 1 TB" },
       { "label": "OS", "value": "Zorin OS / Windows" }
     ]
   },
@@ -21,7 +21,7 @@
 		{ "label": "CPU", "value": "Intel® Core™ i7-12700H 12 gen. (24 MB caché, 14 Cores, 4,70 GHz)" },
 		{ "label": "GPU", "value": "NVIDIA® GeForce® RTX™ 3060, 6 GB, GDDR6" },
 		{ "label": "RAM", "value": "32 GB, 2 x 16 GB, DDR5, 4800 MHz" },
-		{ "label": "Storage", "value": "SSD M.2 2280, PCIe NVMe 4 gen. x4 1 TB" },
+		{ "label": "Storage", "value": "SSD M.2 2280, PCIe NVMe 4 gen. 1 TB" },
 		{ "label": "OS", "value": "Pop!_OS" }
     ]
   },
