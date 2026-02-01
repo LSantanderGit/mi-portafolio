@@ -9,10 +9,10 @@
     "technologies": [
       "react",
       "typescript",
+      "javascript",
       "php",
       "vue",
       "scss",
-      "flutter",
       "oracle",
       "postgresql"
     ],
@@ -26,12 +26,13 @@
     "modality": "hybrid",
     "description": "experience.exp2.description",
     "technologies": [
-      "groovy",
-      "grails",
-      "javascript",
-      "angularjs",
-      "ionic",
-      "postgresql"
+		"javascript",
+		"angularjs",
+		"ionic",
+		"groovy",
+		"grails",
+		"python",
+		"postgresql"
     ],
     "logo": "/assets/work-experience/calim.png"
   },
@@ -43,10 +44,16 @@
     "modality": "hybrid",
     "description": "experience.exp3.description",
     "technologies": [
-      "javascript",
-      "wordpress",
-      "php",
-      "mysql"
+		"communication",
+  		"teamwork",
+  		"agile",
+  		"scrum",
+  		"Microsoft Office",
+  		"Google Workspace",
+  		"Tech Support",
+		"Video Editing",
+		"Customer Service",
+		"Networking"
     ],
     "logo": "/assets/work-experience/pronectis.png"
   }

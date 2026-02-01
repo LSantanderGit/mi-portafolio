@@ -9,10 +9,10 @@ import { ArrowRight } from "lucide-react"
 import skills from "@/locales/skills.json"
 
 // Get skills by category
-const frontendSkills = skills.filter(s => s.category === "frontend").slice(0, 4)
-const backendSkills = skills.filter(s => s.category === "backend").slice(0, 4)
-const databaseSkills = skills.filter(s => s.category === "database").slice(0, 3)
-const toolingSkills = skills.filter(s => s.category === "tooling").slice(0, 3)
+const frontendSkills = skills.filter(s => s.category === "frontend").slice(0, 6)
+const backendSkills = skills.filter(s => s.category === "backend").slice(0, 6)
+const databaseSkills = skills.filter(s => s.category === "database").slice(0, 6)
+const toolingSkills = skills.filter(s => s.category === "tooling").slice(0, 6)
 
 type SkillIconProps = {
   skill: typeof skills[0]

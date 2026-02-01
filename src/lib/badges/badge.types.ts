@@ -44,6 +44,17 @@ export type BadgeKey =
   | "problem-solving"
   | "debugging"
   | "refactoring"
+  | "communication"
+  | "teamwork"
+  | "agile"
+  | "scrum"
+  | "Microsoft Office"
+  | "Google Workspace"
+  | "Tech Support"
+  | "Video Editing"
+  | "Customer Service"
+  | "Networking"
+  | "python"
 
 export type BadgeDefinition = {
   label: string

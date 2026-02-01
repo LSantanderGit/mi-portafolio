@@ -30,27 +30,27 @@ export const BADGE_REGISTRY: Record<BadgeKey, BadgeDefinition> = {
 		variant: "outline",
 	},
 	php: { 
-		label: "php", 
+		label: "PHP", 
 		icon: "php.png", 
 	},
 	vue: { 
-		label: "vue",
+		label: "Vue",
 		icon: "vue.svg", 
 	},
 	scss: { 
-		label: "scss", 
+		label: "SCSS", 
 		icon: "scss.svg", 
 	},
 	flutter: { 
-		label: "flutter", 
+		label: "Flutter", 
 		icon: "flutter.svg", 
 	},
 	oracle: { 
-		label: "oracle", 
+		label: "Oracle", 
 		icon: "oracledb.png", 
 	},
 	postgresql: { 
-		label: "postgresql", 
+		label: "PostgreSQL", 
 		icon: "postgresql.png", 
 	},
 	groovy: {
@@ -121,4 +121,49 @@ export const BADGE_REGISTRY: Record<BadgeKey, BadgeDefinition> = {
 		label: "Refactoring",
 		variant: "secondary",
 	},
+	communication: {
+		label: "Communication",
+		variant: "secondary",
+	},
+	teamwork: {
+		label: "Teamwork",
+		variant: "secondary",
+	},
+	agile: {
+		label: "Agile",
+		variant: "secondary",
+	},
+	scrum: {
+		label: "Scrum",
+		variant: "secondary",
+	},
+	"Microsoft Office": {
+		label: "Microsoft Office",
+		icon: "microsoft-office.png",
+	},
+	"Google Workspace": {
+		label: "Google Workspace",
+		icon: "google-workspace.png",
+	},
+	"Tech Support": {
+		label: "Tech Support",
+		variant: "outline",
+	},
+	"Video Editing": {
+		label: "Video Editing",
+		variant: "outline",
+	},
+	"Customer Service": {
+		label: "Customer Service",
+		variant: "secondary",
+	},
+	"Networking": {
+		label: "Networking",
+		variant: "secondary",
+	},
+	"python": {
+		label: "Python",
+		icon: "python.png",
+	},
+
 }
