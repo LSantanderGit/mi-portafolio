@@ -1,5 +1,3 @@
-import { useTranslation } from "react-i18next"
-
 import {
   useEffect,
   useLayoutEffect,
@@ -14,7 +12,6 @@ import { generateRingEdges } from "./edges"
 
 import ToolNode from "./tool-node"
 import EdgesCanvas from "./edges-canvas"
-import GlassCard from "@/components/ui/glass-card"
 
 type Props = {
   tools: Tool[]
@@ -22,7 +19,6 @@ type Props = {
 }
 
 export default function ToolsNetwork({ tools, height = 420 }: Props) {
-	const { t } = useTranslation()
 
   const containerRef = useRef<HTMLDivElement | null>(null)
 
@@ -101,59 +97,51 @@ const nodes: Node[] = useMemo(() => {
     !hoveredNode || hoveredNode === id
 
   return (
-    <GlassCard className="relative overflow-hidden p-6">
-      {/* Header */}
-      <div className="mb-4">
-        <h3 className="text-lg font-semibold">{t("pages.tools.software.title")}</h3>
-        <p className="text-sm text-muted-foreground">
-		  	{t("pages.tools.software.description")}
-        </p>
-      </div>
+	  <>
+	  	{/* MAP */}
+		<div
+			ref={containerRef}
+			className="relative w-full rounded-2xl border border-border bg-background/40"
+			style={{ height }}
+		>
+			{/* fondo grid */}
+			<div className="pointer-events-none absolute inset-0 opacity-[0.35]">
+				<div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,0,0,0.06),transparent_60%)] dark:bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.05),transparent_60%)]" />
+				<div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(0,0,0,0.06)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.06)_1px,transparent_1px)] bg-[size:48px_48px] dark:bg-[linear-gradient(to_right,rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.05)_1px,transparent_1px)]" />
+			</div>
 
-      {/* MAP */}
-      <div
-        ref={containerRef}
-        className="relative w-full rounded-2xl border border-border bg-background/40"
-        style={{ height }}
-      >
-        {/* fondo grid */}
-		<div className="pointer-events-none absolute inset-0 opacity-[0.35]">
-			<div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,0,0,0.06),transparent_60%)] dark:bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.05),transparent_60%)]" />
-			<div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(0,0,0,0.06)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,0.06)_1px,transparent_1px)] bg-[size:48px_48px] dark:bg-[linear-gradient(to_right,rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.05)_1px,transparent_1px)]" />
+			{/* EDGES (canvas) */}
+			<EdgesCanvas
+			edges={edges}
+			centers={centers}
+			width={width}
+			height={height}
+			hoveredNode={hoveredNode}
+			className="pointer-events-none absolute inset-0"
+			/>
+
+			{/* NODES */}
+			{nodes.map((node) => {
+			const isHovered = hoveredNode === node.id
+			const isConnected = isNodeConnected(node.id)
+			const dimmed = Boolean(hoveredNode && !isConnected)
+
+			return (
+				<ToolNode
+				key={node.id}
+				ref={(el) => {
+					if (el) nodeRefs.current.set(node.id, el)
+				}}
+				node={node}
+				containerHeight={height}
+				isHovered={isHovered}
+				isConnected={isConnected}
+				dimmed={dimmed}
+				onHover={setHoveredNode}
+				/>
+			)
+			})}
 		</div>
-
-        {/* EDGES (canvas) */}
-        <EdgesCanvas
-          edges={edges}
-          centers={centers}
-          width={width}
-          height={height}
-          hoveredNode={hoveredNode}
-          className="pointer-events-none absolute inset-0"
-        />
-
-        {/* NODES */}
-        {nodes.map((node) => {
-          const isHovered = hoveredNode === node.id
-          const isConnected = isNodeConnected(node.id)
-          const dimmed = Boolean(hoveredNode && !isConnected)
-
-          return (
-            <ToolNode
-              key={node.id}
-              ref={(el) => {
-                if (el) nodeRefs.current.set(node.id, el)
-              }}
-              node={node}
-              containerHeight={height}
-              isHovered={isHovered}
-              isConnected={isConnected}
-              dimmed={dimmed}
-              onHover={setHoveredNode}
-            />
-          )
-        })}
-      </div>
-    </GlassCard>
+	  </>
   )
 }

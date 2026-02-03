@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next"
 import PageTitle from "@/components/ui/page-title"
 import Reveal from "@/components/ui/reveal"
 import HardwareSection from "@/components/tools/hardware-section"
-import ToolsSection from "@/components/tools/tools-section"
+import SoftwareSection from "@/components/tools/software-section"
 
 function Tools() {
   const { t } = useTranslation()
@@ -30,7 +30,7 @@ function Tools() {
         {/* SOFTWARE */}
         <section className="mt-20">
           <Reveal delay={0.3}>
-            <ToolsSection />
+            <SoftwareSection />
           </Reveal>
         </section>
       </div>
