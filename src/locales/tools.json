@@ -1,92 +1,72 @@
 [
   {
-    "id": "ide",
-    "category": "Editor & IDE",
-    "items": [
-      {
-        "id": "vscode",
-        "name": "VS Code",
-        "description": "Editor principal",
-        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
-      },
-      {
-        "id": "cursor",
-        "name": "Cursor",
-        "description": "AI-powered coding",
-        "icon": "https://www.cursor.com/brand/icon.svg"
-      }
-    ]
+    "id": "vscode",
+    "name": "VS Code",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
+    "link": "",
+    "category": "Editor & IDE"
   },
   {
-    "id": "browsers",
-    "category": "Navegadores",
-    "items": [
-      {
-        "id": "zen",
-        "name": "Zen Browser",
-        "description": "Navegador principal",
-        "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Zen_Browser_logo_%28red_circles%29.svg/330px-Zen_Browser_logo_%28red_circles%29.svg.png"
-      },
-      {
-        "id": "google-chrome",
-        "name": "Google Chrome",
-        "description": "Navegador secundario",
-        "icon": "https://www.google.com/chrome/static/images/favicons/favicon-32x32.png"
-      }
-    ]
+    "id": "cursor",
+    "name": "Cursor",
+    "icon": "https://www.cursor.com/brand/icon.svg",
+    "link": "",
+    "category": "Editor & IDE"
   },
   {
-    "id": "versioning",
-    "category": "Control de Versiones",
-    "items": [
-      {
-        "id": "git",
-        "name": "Git",
-        "description": "Control de versiones",
-        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
-      },
-      {
-        "id": "github",
-        "name": "GitHub",
-        "description": "Repositorios & CI/CD",
-        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
-      }
-    ]
+    "id": "zen",
+    "name": "Zen Browser",
+    "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Zen_Browser_logo_%28red_circles%29.svg/330px-Zen_Browser_logo_%28red_circles%29.svg.png",
+    "link": "",
+    "category": "Navegadores"
   },
   {
-    "id": "design",
-    "category": "Diseño",
-    "items": [
-      {
-        "id": "figma",
-        "name": "Figma",
-        "description": "UI / UX Design",
-        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
-      },
-      {
-        "id": "canva",
-        "name": "Canva",
-        "description": "Quick graphics",
-        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg"
-      }
-    ]
+    "id": "google-chrome",
+    "name": "Google Chrome",
+    "icon": "https://www.google.com/chrome/static/images/favicons/favicon-32x32.png",
+    "link": "",
+    "category": "Navegadores"
   },
   {
-    "id": "productivity",
-    "category": "Productividad",
-    "items": [
-      {
-        "id": "notion",
-        "name": "Notion",
-        "description": "Notes & docs",
-        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/notion/notion-original.svg"
-      },
-      {
-        "id": "slack",
-        "name": "Slack",
-        "description": "Comunicación",
-        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/slack/slack-original.svg"
-      }
-    ]
+    "id": "git",
+    "name": "Git",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+    "link": "",
+    "category": "Control de Versiones"
+  },
+  {
+    "id": "github",
+    "name": "GitHub",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+    "link": "",
+    "category": "Control de Versiones"
+  },
+  {
+    "id": "figma",
+    "name": "Figma",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
+    "link": "",
+    "category": "Diseño"
+  },
+  {
+    "id": "canva",
+    "name": "Canva",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg",
+    "link": "",
+    "category": "Diseño"
+  },
+  {
+    "id": "notion",
+    "name": "Notion",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/notion/notion-original.svg",
+    "link": "",
+    "category": "Productividad"
+  },
+  {
+    "id": "slack",
+    "name": "Slack",
+    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/slack/slack-original.svg",
+    "link": "",
+    "category": "Productividad"
   }
 ]
