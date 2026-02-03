@@ -133,8 +133,12 @@
 		"description": "Technologies and tools I use",
 		"hardware": {
 			"title": "Hardware",
-			"description": "My main development hardware setups",
+			"description": "My main hardware development tools",
 			"touchHint": "Touch"
+		},
+		"software": {
+			"title": "Software",
+			"description": "My main software development tools"
 		}
 	}
   },

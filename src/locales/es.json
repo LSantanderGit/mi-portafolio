@@ -129,9 +129,13 @@
 		},
 		"description": "Tecnologías y herramientas que utilizo",
 		"hardware": {
-			"title": "Mi Hardware",
-			"description": "Mis principales configuraciones de hardware para desarrollo",
+			"title": "Hardware",
+			"description": "Mis principales herramientas de hardware para desarrollo",
 			"touchHint": "Tocar"
+		},
+		"software": {
+			"title": "Software",
+			"description": "Mis principales herramientas de software para desarrollo"
 		}
 	}
   },
