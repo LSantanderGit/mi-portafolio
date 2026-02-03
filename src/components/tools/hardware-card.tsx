@@ -2,13 +2,9 @@
 
 import { useState } from "react"
 import { useTranslation } from "react-i18next"
-
 import GlassCard from "@/components/ui/glass-card"
 
-type Spec = {
-  label: string
-  value: string
-}
+type Spec = { label: string; value: string }
 
 type Props = {
   name: string
@@ -24,11 +20,16 @@ export default function HardwareCard({ name, type, image, specs, className }: Pr
 
   return (
     <GlassCard
-      className={`group aspect-[4/3] w-full cursor-pointer ${className ?? ""}`}
       onClick={() => setOpen((v) => !v)}
+      className={`
+        group relative w-full cursor-pointer overflow-hidden
+        min-h-[260px] sm:min-h-[300px]
+        md:aspect-[4/3] md:min-h-0
+        ${className ?? ""}
+      `}
     >
       {/* IMAGE */}
-      <div className="absolute inset-0 flex items-center justify-center p-8">
+      <div className="absolute inset-0 flex items-center justify-center p-6 sm:p-8">
         <img
           src={`/assets/hardware/${image}`}
           alt={name}
@@ -51,9 +52,7 @@ export default function HardwareCard({ name, type, image, specs, className }: Pr
           ${open ? "opacity-0" : "opacity-100"}
         `}
       >
-        <p className="text-xs uppercase tracking-wider text-muted-foreground">
-          {type}
-        </p>
+        <p className="text-xs uppercase tracking-wider text-muted-foreground">{type}</p>
         <h3 className="text-lg font-semibold">{name}</h3>
       </div>
 
@@ -61,42 +60,43 @@ export default function HardwareCard({ name, type, image, specs, className }: Pr
       <div
         className={`
           absolute inset-0 p-4 md:p-6
-          flex flex-col justify-center
+          flex flex-col
           opacity-0 translate-y-4
           transition-all duration-500
           group-hover:opacity-100 group-hover:translate-y-0
           ${open ? "opacity-100 translate-y-0" : ""}
         `}
       >
+        {/* Header */}
         <div className="mb-3 md:mb-4">
-          <p className="text-xs uppercase tracking-wider text-primary">
-            {type}
-          </p>
-          <h3 className="text-lg md:text-xl font-bold leading-tight">
-            {name}
-          </h3>
+          <p className="text-xs uppercase tracking-wider text-primary">{type}</p>
+          <h3 className="text-lg md:text-xl font-bold leading-tight">{name}</h3>
         </div>
 
-        <div className="space-y-1.5 md:space-y-2">
-          {specs.map((spec) => (
-            <div
-              key={spec.label}
-              className="flex items-start justify-between border-b border-border/30 py-1 md:py-1.5 last:border-0 gap-3"
-            >
-              <span className="text-xs md:text-sm text-muted-foreground flex-shrink-0 min-w-0">
-                {spec.label}:
-              </span>
-              <span className="text-xs md:text-sm font-medium text-right leading-relaxed break-words min-w-0 flex-1">
-                {spec.value}
-              </span>
-            </div>
-          ))}
+        {/* Specs (scroll en mobile si no entra) */}
+        <div className="flex-1 min-h-0 overflow-y-auto pr-1 md:overflow-visible md:pr-0">
+          <div className="space-y-1.5 md:space-y-2">
+            {specs.map((spec) => (
+              <div
+                key={spec.label}
+                className="flex items-start gap-3 border-b border-border/30 py-1 md:py-1.5 last:border-0"
+              >
+                <span className="w-16 shrink-0 text-xs md:text-sm text-muted-foreground">
+                  {spec.label}:
+                </span>
+
+                <span className="flex-1 min-w-0 text-xs md:text-sm font-medium text-right leading-relaxed break-words">
+                  {spec.value}
+                </span>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
       {/* MOBILE HINT */}
       <div className="absolute top-3 right-3 md:hidden text-xs text-muted-foreground">
-		{t("pages.tools.hardware.touchHint")}
+        {t("pages.tools.hardware.touchHint")}
       </div>
     </GlassCard>
   )

@@ -23,7 +23,6 @@ function Tools() {
         {/* HARDWARE */}
         <section className="mt-16">
           <Reveal delay={0.2}>
-            <h2 className="mb-8 text-2xl font-semibold">Hardware</h2>
             <HardwareSection />
           </Reveal>
         </section>
@@ -31,7 +30,6 @@ function Tools() {
         {/* SOFTWARE */}
         <section className="mt-20">
           <Reveal delay={0.3}>
-            <h2 className="mb-8 text-2xl font-semibold">Software</h2>
             <ToolsSection />
           </Reveal>
         </section>
