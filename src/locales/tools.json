@@ -25,13 +25,13 @@
         "id": "zen",
         "name": "Zen Browser",
         "description": "Navegador principal",
-        "icon": "https://zen-browser.app/logo.svg"
+        "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Zen_Browser_logo_%28red_circles%29.svg/330px-Zen_Browser_logo_%28red_circles%29.svg.png"
       },
       {
-        "id": "arc",
-        "name": "Arc",
+        "id": "google-chrome",
+        "name": "Google Chrome",
         "description": "Navegador secundario",
-        "icon": "https://arc.net/favicon.png"
+        "icon": "https://www.google.com/chrome/static/images/favicons/favicon-32x32.png"
       }
     ]
   },
@@ -42,7 +42,7 @@
       {
         "id": "git",
         "name": "Git",
-        "description": "Version control",
+        "description": "Control de versiones",
         "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
       },
       {
@@ -68,24 +68,6 @@
         "name": "Canva",
         "description": "Quick graphics",
         "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg"
-      }
-    ]
-  },
-  {
-    "id": "dev",
-    "category": "Desarrollo",
-    "items": [
-      {
-        "id": "node",
-        "name": "Node.js",
-        "description": "Runtime",
-        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
-      },
-      {
-        "id": "docker",
-        "name": "Docker",
-        "description": "Containers",
-        "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
       }
     ]
   },

@@ -3,7 +3,7 @@
     "id": "desktop",
     "type": "Desktop PC",
     "name": "Workstation Principal",
-    "image": "/hardware/desktop.png",
+    "image": "desktop.png",
     "specs": [
       { "label": "CPU", "value": "Intel® Core™ i5-13600k gen. (24 MB caché, 14 Cores, 5,10 GHz)" },
       { "label": "GPU", "value": "NVIDIA® GeForce® RTX™ 4070 Super, 12GB, GDDR6X" },
@@ -16,7 +16,7 @@
     "id": "laptop1",
     "type": "Laptop",
     "name": "Dell G15 5520",
-    "image": "/hardware/dellG15.png",
+    "image": "dellG15.avif",
     "specs": [
 		{ "label": "CPU", "value": "Intel® Core™ i7-12700H 12 gen. (24 MB caché, 14 Cores, 4,70 GHz)" },
 		{ "label": "GPU", "value": "NVIDIA® GeForce® RTX™ 3060, 6 GB, GDDR6" },
@@ -28,14 +28,14 @@
   {
 	"id":"laptop2",
 	"type": "Laptop",
-	"name": "Lenovo Legion 5",
-	"image": "/hardware/lenovoLegion5.png",
+	"name": "Lenovo Yoga 710-14IKB",
+	"image": "lenovoYoga710.png",
 	"specs": [
-		{ "label": "CPU", "value": "Intel i7-13700H" },
-		{ "label": "GPU", "value": "RTX 4060" },
-		{ "label": "RAM", "value": "32GB DDR5" },
-		{ "label": "Storage", "value": "SSD" },
-		{ "label": "OS", "value": "Windows 11" }
+		{ "label": "CPU", "value": "Intel® Core™ i5-7200U (4 cores, 2,50 GHz)" },
+		{ "label": "GPU", "value": "Intel HD Graphics 620" },
+		{ "label": "RAM", "value": "1 x 8 GB, DDR4, 2133 MHz" },
+		{ "label": "Storage", "value": "SSD 256 GB SATA3" },
+		{ "label": "OS", "value": "Zorin OS" }
 	]
   }
 ]
