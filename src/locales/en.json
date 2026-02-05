@@ -55,7 +55,18 @@
 			"part1": "My ",
     		"part2": "Projects"
 		},
-		"description": "Selected work"
+		"description": "Selected work",
+		"project": {
+			"personal-portfolio": {
+				"description": "My personal portfolio built with React and Vite.",
+				"images":{
+					"0": "Home Page",
+					"1": "About Page",
+					"2": "Links Page"
+				}	
+			}
+		},
+		"imageDefault": "Image"
     },
     "about": {
       "title": "Hi 👋, My Name is",

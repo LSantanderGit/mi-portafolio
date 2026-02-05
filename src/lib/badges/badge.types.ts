@@ -55,6 +55,8 @@ export type BadgeKey =
   | "Customer Service"
   | "Networking"
   | "python"
+  | "vite"
+  | "java"
 
 export type BadgeDefinition = {
   label: string

@@ -1,32 +1,16 @@
 [
   {
-    "id": "hcdn-ui",
-    "title": "HCDN UI System",
-    "description": "Design system for internal applications.",
-    "images": ["hcdn/1.png", "hcdn/2.png"],
-    "tech": [
-		"react",
-		"typescript",
-		"tailwind",
-		"frontend",
-		"design-patterns"
-    ],
-    "color": {
-      "light": "from-sky-500/20 to-indigo-500/20",
-      "dark": "from-sky-400/10 to-indigo-400/10"
-    }
-  },
-  {
     "id": "portfolio",
     "title": "Personal Portfolio",
-    "description": "My personal portfolio built with React and Vite.",
-    "images": ["portfolio/1.png", "portfolio/2.png"],
+    "translationId": "personal-portfolio",
+    "images": ["portfolio/1.png", "portfolio/2.png", "portfolio/3.png"],
     "tech": [
 		"react",
+		"tailwind",
+		"vite",
 		"typescript",
-		"frontend",
 		"clean-code",
-		"refactoring"
+		"frontend"
     ],
     "color": {
       "light": "from-emerald-500/20 to-teal-500/20",

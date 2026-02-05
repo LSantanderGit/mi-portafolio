@@ -10,8 +10,9 @@
       "react",
       "typescript",
       "javascript",
-      "php",
       "vue",
+      "php",
+	  "java",
       "scss",
       "oracle",
       "postgresql"

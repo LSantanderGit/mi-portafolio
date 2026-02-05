@@ -1,9 +1,11 @@
+import { useRef, useState, useEffect } from "react"
 import Reveal from "@/components/ui/reveal"
-import ProjectCarousel from "./project-carousel"
+import ProjectCarousel, { type ProjectCarouselHandle } from "./project-carousel"
 import ProjectHoverFx from "./project-hover-fx"
 import BadgeGroupFromKeys from "@/components/ui/badge/badge-group.from-keys"
 import { cn } from "@/lib/utils"
 import type { Project } from "./project-types"
+import { useTranslation } from "react-i18next"
 
 type Props = {
   project: Project
@@ -13,6 +15,19 @@ type Props = {
 
 export default function ProjectItem({ project, align, delay }: Props) {
   const isLeft = align === "left"
+  const { t } = useTranslation()
+  const carouselRef = useRef<ProjectCarouselHandle>(null)
+  const [currentImageIndex, setCurrentImageIndex] = useState(0)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (carouselRef.current) {
+        setCurrentImageIndex(carouselRef.current.currentIndex)
+      }
+    }, 100)
+
+    return () => clearInterval(interval)
+  }, [])
 
   return (
     <Reveal delay={delay}>
@@ -37,7 +52,7 @@ export default function ProjectItem({ project, align, delay }: Props) {
                 `bg-gradient-to-br ${project.color.light} dark:${project.color.dark}`
               )}
             >
-              <ProjectCarousel images={project.images} />
+              <ProjectCarousel ref={carouselRef} images={project.images} />
 
               {/* Overlay */}
               <div className="
@@ -48,7 +63,7 @@ export default function ProjectItem({ project, align, delay }: Props) {
                 p-4 pointer-events-none
               ">
                 <p className="text-sm text-white">
-                  {project.description}
+                  {t(`pages.projects.project.${project.translationId}.images.${currentImageIndex}`, { defaultValue: `Image ${currentImageIndex + 1}` })}
                 </p>
               </div>
             </div>
@@ -69,7 +84,7 @@ export default function ProjectItem({ project, align, delay }: Props) {
           </h3>
 
           <p className="text-muted-foreground">
-            {project.description}
+            {t(`pages.projects.project.${project.translationId}.description`)}
           </p>
 
           <BadgeGroupFromKeys

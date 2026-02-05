@@ -56,7 +56,18 @@
 			"part1": "Mis ",
     		"part2": "Proyectos"
 		},
-		"description": "Trabajos seleccionados"
+		"description": "Trabajos seleccionados",
+		"project": {
+			"personal-portfolio": {
+				"description": "Mi portafolio personal construido con React y Vite.",
+				"images":{
+					"0": "página de inicio",
+					"1": "página 'acerca de'",
+					"2": "página de enlaces"
+				}	
+			}
+		},
+		"imageDefault": "Imagen"
     },
     "about": {
       "title": "Hola 👋, Mi Nombre es",

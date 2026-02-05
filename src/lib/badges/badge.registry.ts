@@ -165,5 +165,12 @@ export const BADGE_REGISTRY: Record<BadgeKey, BadgeDefinition> = {
 		label: "Python",
 		icon: "python.png",
 	},
-
+	vite: {
+		label: "Vite",
+		icon: "vite.svg",
+	},
+	java: {
+		label: "Java",
+		icon: "java.png",
+	},
 }
