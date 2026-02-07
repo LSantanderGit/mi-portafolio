@@ -2,6 +2,7 @@ import clsx from "clsx"
 import type { BadgeProps } from "@/lib/badges/badge.types"
 
 const sizeClasses = {
+  xs: "h-5 px-1.5 text-xs gap-1",
   sm: "h-6 px-2 text-xs gap-1",
   md: "h-8 px-3 text-sm gap-2",
   lg: "h-10 px-4 text-base gap-2.5",

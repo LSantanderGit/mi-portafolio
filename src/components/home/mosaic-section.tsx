@@ -99,7 +99,7 @@ export default function MosaicSection() {
                 <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent" />
                 <div className="absolute bottom-3 left-3 right-3">
                   <p className="text-sm font-medium text-foreground truncate">{latestProject.title}</p>
-                  <p className="text-xs text-muted-foreground truncate">{latestProject.description}</p>
+                  <p className="text-xs text-muted-foreground truncate">{t(`pages.projects.project.${latestProject.translationId}.description`)}</p>
                 </div>
               </div>
             </div>
