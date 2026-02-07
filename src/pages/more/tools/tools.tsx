@@ -4,9 +4,12 @@ import PageTitle from "@/components/ui/page-title"
 import Reveal from "@/components/ui/reveal"
 import HardwareSection from "@/components/tools/hardware-section"
 import SoftwareSection from "@/components/tools/software-section"
+import usePageTitle from "@/hooks/use-page-title"
 
 function Tools() {
   const { t } = useTranslation()
+
+  usePageTitle(t("nav.tools."))
 
   return (
     <div className="min-h-screen px-4 py-12 md:py-16">

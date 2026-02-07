@@ -6,9 +6,12 @@ import Reveal from "@/components/ui/reveal"
 import ProfileCard from "@/components/links/profile-card"
 import ContactLinksCard from "@/components/links/contact-links-card"
 import ContactForm from "@/components/links/contact-form"
+import usePageTitle from "@/hooks/use-page-title"
 
 function Links() {
   const { t } = useTranslation()
+
+	usePageTitle(t("nav.links."))
 
   return (
     <div className="min-h-screen px-4 py-12 md:py-16">

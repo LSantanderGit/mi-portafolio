@@ -1,10 +1,14 @@
 import { useTranslation } from "react-i18next"
+
 import PageTitle from "@/components/ui/page-title"
 import Reveal from "@/components/ui/reveal"
 import ProjectsTimeline from "@/components/projects/project-timeline"
+import usePageTitle from "@/hooks/use-page-title"
 
 function Projects() {
   const { t } = useTranslation()
+
+	usePageTitle(t("nav.projects."))
 
   return (
     <div className="min-h-screen px-4 py-12 md:py-16">
