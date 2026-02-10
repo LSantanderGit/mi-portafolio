@@ -17,7 +17,7 @@
       "oracle",
       "postgresql"
     ],
-    "logo": "/assets/work-experience/hcdn.png"
+    "logo": "/assets/work-experience/hcdn.svg"
   },
   {
     "id": "exp-2",
@@ -35,7 +35,7 @@
 		"python",
 		"postgresql"
     ],
-    "logo": "/assets/work-experience/calim.png"
+    "logo": "/assets/work-experience/calim.svg"
   },
   {
     "id": "exp-3",
@@ -56,6 +56,6 @@
 		"Customer Service",
 		"Networking"
     ],
-    "logo": "/assets/work-experience/pronectis.png"
+    "logo": "/assets/work-experience/pronectis.svg"
   }
 ]

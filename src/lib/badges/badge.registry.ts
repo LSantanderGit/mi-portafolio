@@ -7,11 +7,11 @@ export const BADGE_REGISTRY: Record<BadgeKey, BadgeDefinition> = {
 	},
 	typescript: {
 		label: "TypeScript",
-		icon: "typescript.png",
+		icon: "typescript.svg",
 	},
 	tailwind: {
 		label: "Tailwind CSS",
-		icon: "tailwind.png",
+		icon: "tailwind.svg",
 	},
 	node: {
 		label: "Node.js",
@@ -31,7 +31,7 @@ export const BADGE_REGISTRY: Record<BadgeKey, BadgeDefinition> = {
 	},
 	php: { 
 		label: "PHP", 
-		icon: "php.png", 
+		icon: "php.svg", 
 	},
 	vue: { 
 		label: "Vue",
@@ -47,11 +47,11 @@ export const BADGE_REGISTRY: Record<BadgeKey, BadgeDefinition> = {
 	},
 	oracle: { 
 		label: "Oracle", 
-		icon: "oracledb.png", 
+		icon: "oracledb.svg", 
 	},
 	postgresql: { 
 		label: "PostgreSQL", 
-		icon: "postgresql.png", 
+		icon: "postgresql.svg", 
 	},
 	groovy: {
 		label: "Groovy",
@@ -83,7 +83,7 @@ export const BADGE_REGISTRY: Record<BadgeKey, BadgeDefinition> = {
 	},
 	dotnet: {
 		label: ".NET",
-		icon: "net.png",
+		icon: "net.svg",
 	},
 	git: {
 		label: "Git",
@@ -139,11 +139,11 @@ export const BADGE_REGISTRY: Record<BadgeKey, BadgeDefinition> = {
 	},
 	"Microsoft Office": {
 		label: "Microsoft Office",
-		icon: "microsoft-office.png",
+		icon: "microsoft-office.svg",
 	},
 	"Google Workspace": {
 		label: "Google Workspace",
-		icon: "google-workspace.png",
+		icon: "google-workspace.svg",
 	},
 	"Tech Support": {
 		label: "Tech Support",
@@ -163,7 +163,7 @@ export const BADGE_REGISTRY: Record<BadgeKey, BadgeDefinition> = {
 	},
 	"python": {
 		label: "Python",
-		icon: "python.png",
+		icon: "python.svg",
 	},
 	vite: {
 		label: "Vite",
@@ -171,6 +171,6 @@ export const BADGE_REGISTRY: Record<BadgeKey, BadgeDefinition> = {
 	},
 	java: {
 		label: "Java",
-		icon: "java.png",
+		icon: "java.svg",
 	},
 }

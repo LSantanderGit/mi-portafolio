@@ -24,7 +24,7 @@
     "id": "github",
     "name": "GitHub",
     "iconType": "lib",
-    "icon": "github.png",
+    "icon": "github.svg",
     "category": "tooling"
   },
   {
@@ -45,14 +45,14 @@
     "id": "java",
     "name": "Java",
     "iconType": "lib",
-    "icon": "java.png",
+    "icon": "java.svg",
     "category": "backend"
   },
   {
     "id": "microsoftsql",
     "name": "Microsoft SQL Server",
     "iconType": "lib",
-    "icon": "microsoftsql.svg",
+    "icon": "microsoft-sql.svg",
     "category": "database"
   },
   {
@@ -66,7 +66,7 @@
     "id": "net",
     "name": ".NET",
     "iconType": "lib",
-    "icon": "net.png",
+    "icon": "net.svg",
     "category": "backend"
   },
   {
@@ -80,21 +80,21 @@
     "id": "oracledb",
     "name": "Oracle",
     "iconType": "lib",
-    "icon": "oracledb.png",
+    "icon": "oracledb.svg",
     "category": "database"
   },
   {
     "id": "php",
     "name": "PHP",
     "iconType": "lib",
-    "icon": "php.png",
+    "icon": "php.svg",
     "category": "backend"
   },
   {
     "id": "postgres",
     "name": "PostgreSQL",
     "iconType": "lib",
-    "icon": "postgresql.png",
+    "icon": "postgresql.svg",
     "category": "database"
   },
   {
@@ -108,21 +108,21 @@
     "id": "tailwind",
     "name": "Tailwind CSS",
     "iconType": "lib",
-    "icon": "tailwind.png",
+    "icon": "tailwind.svg",
     "category": "frontend"
   },
   {
     "id": "typescript",
     "name": "TypeScript",
     "iconType": "lib",
-    "icon": "typescript.png",
+    "icon": "typescript.svg",
     "category": "frontend"
   },
   {
     "id": "vscode",
     "name": "VS Code",
     "iconType": "lib",
-    "icon": "vscode.png",
+    "icon": "vscode.svg",
     "category": "tooling"
   }
 ]
