@@ -137,7 +137,7 @@ export default function WorkRoadmap() {
             style={{ top: `${indicatorPosition}%` }}
           >
             <img
-              src="/assets/profile.png"
+              src="/assets/profile.jpg"
               alt="Position indicator"
               className="w-full h-full object-cover"
             />
@@ -158,7 +158,7 @@ export default function WorkRoadmap() {
             style={{ top: `${indicatorPosition}%` }}
           >
             <img
-              src="/assets/profile.png"
+              src="/assets/profile.jpg"
               alt="Position indicator"
               className="w-full h-full object-cover"
             />

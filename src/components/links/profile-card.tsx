@@ -24,7 +24,7 @@ export default function ProfileCard() {
         {/* Avatar */}
         <div className="h-32 w-32 overflow-hidden rounded-full border-2 border-border">
           <img
-            src="/assets/profile.png"
+            src="/assets/profile.jpg"
             alt={t("pages.links.profile.imageAlt")}
             className="h-full w-full object-cover"
           />

@@ -3,7 +3,7 @@
     "id": "portfolio",
     "title": "Personal Portfolio",
     "translationId": "personal-portfolio",
-    "images": ["portfolio/1.png", "portfolio/2.png", "portfolio/3.png"],
+    "images": ["portfolio/1.jpg", "portfolio/2.jpg", "portfolio/3.jpg"],
     "tech": [
 		"react",
 		"tailwind",

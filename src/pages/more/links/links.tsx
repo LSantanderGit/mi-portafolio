@@ -32,13 +32,6 @@ function Links() {
 				<ContactLinksCard />
 			</div>
 		</Reveal>
-
-        {/* FORM */}
-        <Reveal delay={0.3}>
-			<div className="mt-10">
-			<ContactForm />
-			</div>
-        </Reveal>
       </div>
     </div>
   )
