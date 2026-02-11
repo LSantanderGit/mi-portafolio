@@ -61,7 +61,7 @@ function ToolItem({ tool }: ToolItemProps) {
             }}
           >
             <img
-              src={tool.icon || "/placeholder.svg"}
+              src={"/assets/tools/" + (tool.icon || "placeholder.svg")}
               alt={tool.name}
               className="h-10 w-10 object-contain"
               loading="lazy"

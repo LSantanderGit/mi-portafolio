@@ -2,105 +2,105 @@
   {
     "id": "vscode",
     "name": "VS Code",
-    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
+    "icon": "vscode.svg",
     "link": "https://code.visualstudio.com/",
     "category": "Editor & IDE"
   },
   {
     "id": "zen",
     "name": "Zen Browser",
-    "icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Zen_Browser_logo_%28red_circles%29.svg/330px-Zen_Browser_logo_%28red_circles%29.svg.png",
+    "icon": "zen.svg",
     "link": "https://zen-browser.app/",
     "category": "Navegadores"
   },
   {
     "id": "google-chrome",
     "name": "Google Chrome",
-    "icon": "https://www.google.com/chrome/static/images/favicons/favicon-32x32.png",
+    "icon": "chrome.svg",
     "link": "https://www.google.com/chrome/",
     "category": "Navegadores"
   },
   {
     "id": "git",
     "name": "Git",
-    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+    "icon": "git.svg",
     "link": "https://git-scm.com/",
     "category": "Control de Versiones"
   },
   {
     "id": "github",
     "name": "GitHub",
-    "icon": "https://cdn.iconscout.com/icon/free/png-256/free-github-logo-icon-svg-download-png-8630395.png?f=webp",
+    "icon": "github.svg",
     "link": "https://github.com/",
     "category": "Control de Versiones"
   },
   {
     "id": "figma",
     "name": "Figma",
-    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
+    "icon": "figma.svg",
     "link": "https://www.figma.com/",
     "category": "Diseño"
   },
   {
     "id": "canva",
     "name": "Canva",
-    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg",
+    "icon": "canva.svg",
     "link": "https://www.canva.com/",
     "category": "Diseño"
   },
   {
     "id": "notion",
     "name": "Notion",
-    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/notion/notion-original.svg",
+    "icon": "notion.svg",
     "link": "https://www.notion.com/",
     "category": "Productividad"
   },
   {
     "id": "slack",
     "name": "Slack",
-    "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/slack/slack-original.svg",
+    "icon": "slack.svg",
     "link": "https://slack.com/",
     "category": "Productividad"
   },
   {
 	"id": "postman",
 	"name": "Postman",
-	"icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg",
+	"icon": "postman.svg",
 	"link": "https://www.postman.com/",
 	"category": "APIs"
   },
   {
 	"id": "jmeter",
 	"name": "Apache JMeter",
-	"icon": "https://jmeter.apache.org/images/mstile-144x144.png",
+	"icon": "jmeter.svg",
 	"link": "https://jmeter.apache.org/",
 	"category": "APIs"
   },
   {
 	"id": "windows10",
 	"name": "Windows 10",
-	"icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Windows_logo_-_2012.svg/250px-Windows_logo_-_2012.svg.png",
+	"icon": "windows10.svg",
 	"link": "https://www.microsoft.com/en-us/windows/windows-10-home",
 	"category": "Sistema Operativo"
   },
   {
 	"id": "zorin-os",
 	"name": "Zorin OS",
-	"icon": "https://upload.wikimedia.org/wikipedia/commons/1/14/Zorin_Logomark.svg",
+	"icon": "zorin.svg",
 	"link": "https://zorin.com/os/",
 	"category": "Sistema Operativo"
   },
   {
 	"id": "v0",
 	"name": "V0",
-	"icon": "https://assets.findstack.com/abfhjtx1s5b2l1fwnd20irdby4ss",
+	"icon": "v0.svg",
 	"link": "https://v0.app/",
 	"category": "IA"
   },
   {
 	"id": "chatgpt",
 	"name": "ChatGPT",
-	"icon": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/ChatGPT_logo.svg/960px-ChatGPT_logo.svg.png",
+	"icon": "chatgpt.svg",
 	"link": "https://chat.openai.com/",
 	"category": "IA"
   }

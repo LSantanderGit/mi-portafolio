@@ -46,7 +46,7 @@ export const BADGE_REGISTRY: Record<BadgeKey, BadgeDefinition> = {
 		icon: "flutter.svg", 
 	},
 	oracle: { 
-		label: "Oracle", 
+		label: "Oracle DB", 
 		icon: "oracledb.svg", 
 	},
 	postgresql: { 

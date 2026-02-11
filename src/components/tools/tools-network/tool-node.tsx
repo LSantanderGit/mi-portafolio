@@ -1,6 +1,3 @@
-// src/components/tools/tools-network/tool-node.tsx
-"use client"
-
 import { forwardRef } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { ExternalLink } from "lucide-react"
@@ -69,7 +66,7 @@ const ToolNode = forwardRef<HTMLDivElement, Props>(function ToolNode(
           ].join(" ")}
         >
           <img
-            src={node.icon || "/placeholder.svg"}
+            src={"/assets/tools/" + (node.icon || "placeholder.svg")}
             alt={node.name}
             className="h-7 w-7 object-contain"
             loading="lazy"
