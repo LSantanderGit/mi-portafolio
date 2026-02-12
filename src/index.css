@@ -153,122 +153,66 @@
   }
 }
 
-/* Animaciones más dramáticas y con más movimiento para el efecto lava lamp */
-@keyframes blob-1 {
-  0%,
-  100% {
-    transform: translate(0, 0) scale(1);
-  }
-  25% {
-    transform: translate(100px, -150px) scale(1.2);
-  }
-  50% {
-    transform: translate(-80px, 120px) scale(0.8);
-  }
-  75% {
-    transform: translate(120px, 80px) scale(1.1);
-  }
+/* Base: background por tema sin JS */
+.lava-blob {
+  background: var(--lava-gradient-light);
 }
 
-@keyframes blob-2 {
-  0%,
-  100% {
-    transform: translate(0, 0) scale(1);
-  }
-  33% {
-    transform: translate(-120px, 100px) scale(1.3);
-  }
-  66% {
-    transform: translate(90px, -90px) scale(0.9);
-  }
+.dark .lava-blob {
+  background: var(--lava-gradient-dark);
 }
 
-@keyframes blob-3 {
-  0%,
-  100% {
-    transform: translate(0, 0) scale(1);
-  }
-  20% {
-    transform: translate(150px, 100px) scale(1.15);
-  }
-  40% {
-    transform: translate(-100px, -120px) scale(0.85);
-  }
-  60% {
-    transform: translate(-130px, 140px) scale(1.25);
-  }
-  80% {
-    transform: translate(110px, -80px) scale(0.95);
-  }
+/* Si el usuario desactiva animaciones desde tu UI */
+.no-motion .lava-blob {
+  animation: none !important;
+  transform: none !important;
+  will-change: auto !important;
 }
 
-@keyframes blob-4 {
-  0%,
-  100% {
-    transform: translate(0, 0) scale(1) rotate(0deg);
-  }
-  25% {
-    transform: translate(-90px, -130px) scale(1.2) rotate(90deg);
-  }
-  50% {
-    transform: translate(110px, 100px) scale(0.9) rotate(180deg);
-  }
-  75% {
-    transform: translate(-120px, 90px) scale(1.1) rotate(270deg);
-  }
+
+/* Animaciones: solo transform (más barato que animar blur/opacity) */
+.lava-blob[data-anim="blob-1"] { animation: lava1 16s ease-in-out infinite; }
+.lava-blob[data-anim="blob-2"] { animation: lava2 18s ease-in-out infinite; }
+.lava-blob[data-anim="blob-3"] { animation: lava3 20s ease-in-out infinite; }
+.lava-blob[data-anim="blob-4"] { animation: lava4 22s ease-in-out infinite; }
+.lava-blob[data-anim="blob-5"] { animation: lava5 24s ease-in-out infinite; }
+.lava-blob[data-anim="blob-6"] { animation: lava6 26s ease-in-out infinite; }
+
+@keyframes lava1 {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  50%      { transform: translate3d(80px, 40px, 0) scale(1.08); }
+}
+@keyframes lava2 {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  50%      { transform: translate3d(-70px, -30px, 0) scale(1.06); }
+}
+@keyframes lava3 {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  50%      { transform: translate3d(60px, -50px, 0) scale(1.10); }
+}
+@keyframes lava4 {
+  0%, 100% { transform: translate3d(0,0,0) scale(1); }
+  50%      { transform: translate3d(70px,-40px,0) scale(1.08); }
+}
+@keyframes lava5 {
+  0%, 100% { transform: translate3d(0,0,0) scale(1); }
+  50%      { transform: translate3d(-60px,50px,0) scale(1.06); }
+}
+@keyframes lava6 {
+  0%, 100% { transform: translate3d(0,0,0) scale(1); }
+  50%      { transform: translate3d(50px,30px,0) scale(1.10); }
 }
 
-@keyframes blob-5 {
-  0%,
-  100% {
-    transform: translate(0, 0) scale(1);
-  }
-  30% {
-    transform: translate(140px, -110px) scale(1.25);
-  }
-  60% {
-    transform: translate(-110px, 130px) scale(0.85);
-  }
+/* Desktop: un poco más grande + blur mayor */
+@media (min-width: 768px) {
+  .lava-blob:nth-child(1) { width: 340px !important; height: 340px !important; filter: blur(22px) !important; }
+  .lava-blob:nth-child(2) { width: 320px !important; height: 320px !important; filter: blur(20px) !important; }
+  .lava-blob:nth-child(3) { width: 380px !important; height: 380px !important; filter: blur(24px) !important; }
+  .lava-blob:nth-child(4) { width: 320px !important; height: 320px !important; filter: blur(20px) !important; }
+  .lava-blob:nth-child(5) { width: 360px !important; height: 360px !important; filter: blur(22px) !important; }
+  .lava-blob:nth-child(6) { width: 340px !important; height: 340px !important; filter: blur(20px) !important; }
 }
 
-@keyframes blob-6 {
-  0%,
-  100% {
-    transform: translate(0, 0) scale(1);
-  }
-  50% {
-    transform: translate(-150px, -100px) scale(1.3);
-  }
-}
-
-.animate-gradient {
-  animation: gradient-flow 3s ease infinite;
-}
-
-/* Reducir duración de animaciones de 20s a 8-12s para más movimiento visible */
-.animate-blob-1 {
-  animation: blob-1 10s ease-in-out infinite;
-}
-
-.animate-blob-2 {
-  animation: blob-2 12s ease-in-out infinite;
-}
-
-.animate-blob-3 {
-  animation: blob-3 11s ease-in-out infinite;
-}
-
-.animate-blob-4 {
-  animation: blob-4 9s ease-in-out infinite;
-}
-
-.animate-blob-5 {
-  animation: blob-5 8s ease-in-out infinite;
-}
-
-.animate-blob-6 {
-  animation: blob-6 10s ease-in-out infinite;
-}
 
 /* glow hover effect */
 .project-glow::after {

@@ -27,6 +27,8 @@ export default function ProfileCard() {
             src="/assets/profile.jpg"
             alt={t("pages.links.profile.imageAlt")}
             className="h-full w-full object-cover"
+			decoding="async"
+		  loading="lazy"
           />
         </div>
 

@@ -28,6 +28,8 @@ function SkillIcon({ skill }: SkillIconProps) {
           src={iconPath || "/placeholder.svg"} 
           alt={skill.name}
           className="w-7 h-7 md:w-8 md:h-8 object-contain"
+		  decoding="async"
+		  loading="lazy"
         />
       </div>
       {/* Tooltip */}

@@ -38,6 +38,8 @@ export default function HardwareCard({ name, type, image, className }: Props) {
             max-h-full max-w-full object-contain
             transition-all duration-500
           `}
+		  decoding="async"
+		  loading="lazy"
         />
       </div>
 	  {/* <div className="absolute inset-0 flex items-center justify-center p-6 sm:p-8">

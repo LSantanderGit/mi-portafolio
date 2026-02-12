@@ -12,25 +12,22 @@ export function MotionProvider({ children }: { children: React.ReactNode }) {
     typeof window !== "undefined" &&
     window.matchMedia("(prefers-reduced-motion: reduce)").matches
 
-  const [animationsEnabled, setAnimationsEnabled] = useState(
-    !prefersReducedMotion
-  )
+  const [animationsEnabled, setAnimationsEnabled] = useState(!prefersReducedMotion)
 
-  // sync con prefers-reduced-motion si cambia
   useEffect(() => {
-    if (prefersReducedMotion) {
-      setAnimationsEnabled(false)
-    }
+    if (prefersReducedMotion) setAnimationsEnabled(false)
   }, [prefersReducedMotion])
 
-  const toggleAnimations = () => {
-    setAnimationsEnabled((prev) => !prev)
-  }
+  useEffect(() => {
+    const root = document.documentElement
+    if (!animationsEnabled) root.classList.add("no-motion")
+    else root.classList.remove("no-motion")
+  }, [animationsEnabled])
+
+  const toggleAnimations = () => setAnimationsEnabled((prev) => !prev)
 
   return (
-    <MotionContext.Provider
-      value={{ animationsEnabled, toggleAnimations }}
-    >
+    <MotionContext.Provider value={{ animationsEnabled, toggleAnimations }}>
       {children}
     </MotionContext.Provider>
   )
@@ -38,8 +35,6 @@ export function MotionProvider({ children }: { children: React.ReactNode }) {
 
 export function useMotion() {
   const context = useContext(MotionContext)
-  if (!context) {
-    throw new Error("useMotion must be used within MotionProvider")
-  }
+  if (!context) throw new Error("useMotion must be used within MotionProvider")
   return context
 }

@@ -79,6 +79,8 @@ export default function SkillsGrid() {
                   duration-300
                   group-hover:scale-110
                 "
+				decoding="async"
+		  		loading="lazy"
               />
 
               {/* Tooltip */}

@@ -89,6 +89,8 @@ const ProjectCarousel = forwardRef<ProjectCarouselHandle, Props>(
               alt=""
               className="h-full w-full flex-shrink-0 object-cover"
               draggable={false}
+			  decoding="async"
+			  loading="lazy"
             />
           ))}
         </div>

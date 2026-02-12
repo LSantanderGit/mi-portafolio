@@ -4,8 +4,9 @@ import React from "react"
 
 import { motion } from "framer-motion"
 import { useTranslation } from "react-i18next"
-import { useMotion } from "@/components/providers/motion-provider"
+import LazyResource from "@/components/ui/lazy-resource"
 import GlassCard from "@/components/ui/glass-card"
+import { useMotion } from "@/components/providers/motion-provider"
 import { Link } from "react-router-dom"
 import { 
   Code2, 
@@ -16,12 +17,19 @@ import {
 } from "lucide-react"
 import { techStack } from "@/locales/tech-stacks"
 import { resolveBadges } from "@/lib/badges/badge.helpers"
-import projects from "@/locales/projects.json"
 import BadgeGroup from "@/components/ui/badge/badge-group"
 
 const topTechStack = techStack.slice(0, 6)
 const resolvedBadges = resolveBadges(topTechStack)
-const latestProject = projects[0]
+
+type Project = {
+  id: string
+  title: string
+  translationId: string
+  images: string[]
+  tech: string[]
+  color: { light: string; dark: string }
+}
 
 type MosaicItemProps = {
   title: string
@@ -31,6 +39,20 @@ type MosaicItemProps = {
   className?: string
   children?: React.ReactNode
   delay?: number
+}
+
+const loadProjects = async (): Promise<Project[]> => {
+  const mod = await import("@/locales/projects.json")
+  return mod.default as Project[]
+}
+
+
+function ProjectPreviewSkeleton() {
+  return (
+    <div className="mt-auto pt-4 flex-1 flex flex-col justify-end">
+      <div className="h-[140px] md:h-[180px] rounded-xl bg-secondary/40 animate-pulse border border-border" />
+    </div>
+  )
 }
 
 function MosaicItem({ title, description, icon, href, className = "", children, delay = 0 }: MosaicItemProps) {
@@ -81,28 +103,44 @@ export default function MosaicSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {/* Projects - Large with project preview */}
           <MosaicItem
-            title={t("nav.projects.")}
-            description={t("nav.projects.description")}
-            icon={<Code2 className="w-6 h-6" />}
-            href="/projects"
-            className="md:col-span-2 lg:row-span-2"
-            delay={0.1}
+			title={t("nav.projects.")}
+			description={t("nav.projects.description")}
+			icon={<Code2 className="w-6 h-6" />}
+			href="/projects"
+			className="md:col-span-2 lg:row-span-2"
+			delay={0.1}
           >
-            {/* Project Preview */}
-            <div className="mt-auto pt-4 flex-1 flex flex-col justify-end">
-              <div className="relative rounded-xl overflow-hidden border border-border bg-secondary/30 group-hover:border-foreground/20 transition-all">
-                <img 
-                  src={`/assets/projects/${latestProject.images[0]}`}
-                  alt={latestProject.title}
-                  className="w-full h-[140px] md:h-[180px] object-cover object-top opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent" />
-                <div className="absolute bottom-3 left-3 right-3">
-                  <p className="text-sm font-medium text-foreground truncate">{latestProject.title}</p>
-                  <p className="text-xs text-muted-foreground truncate">{t(`pages.projects.project.${latestProject.translationId}.description`)}</p>
-                </div>
-              </div>
-            </div>
+            <LazyResource<Project[]>
+              cacheKey="projects.json"
+              loader={loadProjects}
+              fallback={<ProjectPreviewSkeleton />}
+            >
+              {(projects) => {
+                const latestProject = projects[0]
+                if (!latestProject) return <ProjectPreviewSkeleton />
+
+                return (
+                  <div className="mt-auto pt-4 flex-1 flex flex-col justify-end">
+                    <div className="relative rounded-xl overflow-hidden border border-border bg-secondary/30 group-hover:border-foreground/20 transition-all">
+                      <img
+                        src={`/assets/projects/${latestProject.images[0]}`}
+                        alt={latestProject.title}
+                        className="w-full h-[140px] md:h-[180px] object-cover object-top opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
+                        decoding="async"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent" />
+                      <div className="absolute bottom-3 left-3 right-3">
+                        <p className="text-sm font-medium text-foreground truncate">{latestProject.title}</p>
+                        <p className="text-xs text-muted-foreground truncate">
+                          {t(`pages.projects.project.${latestProject.translationId}.description`)}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                )
+              }}
+            </LazyResource>
           </MosaicItem>
 
           {/* About */}

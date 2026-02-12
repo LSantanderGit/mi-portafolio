@@ -70,6 +70,7 @@ const ToolNode = forwardRef<HTMLDivElement, Props>(function ToolNode(
             alt={node.name}
             className="h-7 w-7 object-contain"
             loading="lazy"
+			decoding="async"
           />
         </div>
 

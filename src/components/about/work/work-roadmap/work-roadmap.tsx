@@ -140,6 +140,8 @@ export default function WorkRoadmap() {
               src="/assets/profile.jpg"
               alt="Position indicator"
               className="w-full h-full object-cover"
+			  decoding="async"
+		  		loading="lazy"
             />
           </div>
 
@@ -161,6 +163,8 @@ export default function WorkRoadmap() {
               src="/assets/profile.jpg"
               alt="Position indicator"
               className="w-full h-full object-cover"
+			  decoding="async"
+			  loading="lazy"
             />
           </div>
 

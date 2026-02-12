@@ -65,6 +65,7 @@ function ToolItem({ tool }: ToolItemProps) {
               alt={tool.name}
               className="h-10 w-10 object-contain"
               loading="lazy"
+			  decoding="async"
             />
           </div>
 

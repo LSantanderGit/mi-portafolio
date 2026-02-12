@@ -1,4 +1,7 @@
 {
+	"app": {
+		"loading": "Loading..."
+	},
   "nav": {
     "menu": "Menu",
     "home": {

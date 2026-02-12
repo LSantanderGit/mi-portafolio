@@ -46,6 +46,7 @@ export default function Badge({
           alt=""
           className="h-4 w-4 shrink-0"
           loading="lazy"
+		  decoding="async"
         />
       )}
 

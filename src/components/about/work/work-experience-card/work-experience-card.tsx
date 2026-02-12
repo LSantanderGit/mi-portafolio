@@ -50,6 +50,8 @@ export default function WorkExperienceCard({
           src={experience.logo || "/placeholder.svg"}
           alt={experience.company}
           className="w-17 h-17 rounded-xl object-cover border-2 border-border flex-shrink-0"
+		  decoding="async"
+		  loading="lazy"
         />
 
         {/* Contenido */}

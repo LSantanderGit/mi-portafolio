@@ -66,6 +66,8 @@ export default function ExperiencePreview() {
                     src={latestExperience.logo || "/placeholder.svg"} 
                     alt={latestExperience.company}
                     className="w-12 h-12 md:w-14 md:h-14 object-contain"
+					decoding="async"
+		  			loading="lazy"
                   />
                 </div>
               </div>
