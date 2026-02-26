@@ -3,6 +3,7 @@ import LazySection from "@/components/ui/lazy-section"
 import SectionFallback from "@/components/ui/section-fallback"
 import MosaicSkeleton from "@/components/home/mosaic-skeleton"
 import TechSkeleton from "@/components/home/tech-skeleton"
+import Reveal from "@/components/ui/reveal"
 
 import HeroSection from "@/components/home/hero-section"
 
@@ -14,23 +15,33 @@ const ContactCTA = lazy(() => import("@/components/home/contact-cta"))
 export default function Home() {
   return (
     <main className="relative min-h-screen overflow-hidden">
-      <HeroSection />
+		<Reveal delay={0.1}>
+			<HeroSection />
+		</Reveal>
 
-      <LazySection fallback={<MosaicSkeleton />} rootMargin="300px">
-        <MosaicSection />
-      </LazySection>
+		<Reveal delay={0.2}>
+			<LazySection fallback={<MosaicSkeleton />} rootMargin="300px">
+				<MosaicSection />
+			</LazySection>
+		</Reveal>
 
-      <LazySection fallback={<SectionFallback rows={2} />} rootMargin="300px">
-        <ExperiencePreview />
-      </LazySection>
+		<Reveal delay={0.3}>
+			<LazySection fallback={<SectionFallback rows={2} />} rootMargin="300px">
+				<ExperiencePreview />
+			</LazySection>
+		</Reveal>
 
-      <LazySection fallback={<TechSkeleton />} rootMargin="300px">
-        <TechPreview />
-      </LazySection>
+		<Reveal delay={0.4}>
+			<LazySection fallback={<TechSkeleton />} rootMargin="300px">
+				<TechPreview />
+			</LazySection>
+		</Reveal>
 
-      <LazySection fallback={<SectionFallback rows={1} />} rootMargin="400px">
-        <ContactCTA />
-      </LazySection>
+		<Reveal delay={0.5}>
+			<LazySection fallback={<SectionFallback rows={1} />} rootMargin="400px">
+				<ContactCTA />
+			</LazySection>
+		</Reveal>
     </main>
   )
 }
