@@ -31,39 +31,54 @@ export default function Header() {
     },
   ];
 
-  return (
-    <>
-      <header className="sticky top-0 z-50 py-4">
-        <div className="container mx-auto px-4 flex items-center justify-between">
+  	return (
+		<>
+			<header className="sticky top-0 z-50 py-4">
+				<div className="container mx-auto px-4 flex items-center justify-between">
+					<div className="flex items-center gap-3">
 
-          {/* Mobile */}
-          <button
-            onClick={() => setMobileOpen(true)}
-            className="md:hidden p-2 rounded-md hover:bg-accent"
-          >
-            <Menu className="h-5 w-5" />
-          </button>
+						<button
+							onClick={() => setMobileOpen(true)}
+							className="md:hidden p-2 rounded-md hover:bg-accent transition-colors"
+						>
+							<Menu className="h-5 w-5" />
+						</button>
 
-          {/* Desktop */}
-          <div className="hidden md:flex flex-1 justify-center">
-            <NavMenu
-              routes={routes}
-              moreRoutes={moreRoutes}
-              moreLabel={t("nav.more")}
-            />
-          </div>
+						<a href="/" className="flex items-center">
+							<img
+							src="/assets/logo.svg"
+							alt="Logo"
+							className="
+								h-8
+								md:h-9
+								w-auto
+								transition-transform
+								hover:scale-105
+							"
+							/>
+						</a>
+					</div>
 
-          <SettingsButton />
-        </div>
-      </header>
+					<div className="hidden md:flex flex-1 justify-center">
+						<NavMenu
+							routes={routes}
+							moreRoutes={moreRoutes}
+							moreLabel={t("nav.more")}
+						/>
+					</div>
 
-      <MobileMenu
-        open={mobileOpen}
-        onOpenChange={setMobileOpen}
-        routes={routes}
-        moreRoutes={moreRoutes}
-        title={t("nav.menu")}
-      />
-    </>
-  );
+					<SettingsButton />
+
+				</div>
+			</header>
+
+			<MobileMenu
+				open={mobileOpen}
+				onOpenChange={setMobileOpen}
+				routes={routes}
+				moreRoutes={moreRoutes}
+				title={t("nav.menu")}
+			/>
+		</>
+	);
 }
