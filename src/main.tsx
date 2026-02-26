@@ -15,3 +15,6 @@ createRoot(document.getElementById('root')!).render(
     </ThemeProvider>
   </StrictMode>,
 )
+
+;(window as any).__APP_READY__ = true
+requestAnimationFrame(() => window.dispatchEvent(new Event("app:ready")))

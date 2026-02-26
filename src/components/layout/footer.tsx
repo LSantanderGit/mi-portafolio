@@ -37,11 +37,14 @@ export default function Footer() {
           <div className="grid grid-cols-1 gap-12 md:grid-cols-4">
 
             {/* IDENTIDAD */}
-            <div className="space-y-4">
-              <div className="text-2xl font-bold tracking-tight">
-                LMS
-              </div>
-
+            <div className="space-y-2">
+				<a className="inline-flex items-center gap-2 text-2xl font-bold group">
+					<img 
+						src="/assets/logo.svg" 
+						alt="Logo" 
+						className="h-12 w-24 transition-transform duration-300 group-hover:scale-110"
+					/>
+				</a>
               <p className="text-sm text-muted-foreground max-w-xs leading-relaxed">
                 {t("footer.description")}
               </p>

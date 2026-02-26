@@ -2,12 +2,222 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="/assets/logo-icon-light.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lucas Matías Santander | Portfolio</title>
+
+    <style>
+      #app-splash {
+        position: fixed;
+        inset: 0;
+        z-index: 9999;
+        display: grid;
+        place-items: center;
+        background: #ffffff;
+        color: #0a0a0a;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        #app-splash {
+          background: #000000;
+          color: #ffffff;
+        }
+      }
+
+      html[data-theme="dark"] #app-splash {
+        background: #000000;
+        color: #ffffff;
+      }
+      html[data-theme="light"] #app-splash {
+        background: #ffffff;
+        color: #0a0a0a;
+      }
+
+      .app-splash__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        padding: 24px;
+      }
+
+      .app-splash__logo {
+        width: 88px;
+        height: 88px;
+        user-select: none;
+        -webkit-user-drag: none;
+        animation: splashFloat 1.8s ease-in-out infinite;
+        will-change: transform;
+      }
+
+      .app-splash__bar {
+        width: min(360px, 78vw);
+        height: 10px;
+        border-radius: 999px;
+        overflow: hidden;
+        background: rgba(127, 127, 127, 0.18);
+        box-shadow: 0 0 0 1px rgba(127, 127, 127, 0.14) inset;
+      }
+
+      .app-splash__barFill {
+        height: 100%;
+        width: 0%;
+        border-radius: 999px;
+        background: currentColor;
+        opacity: 0.75;
+        transition: width 160ms linear;
+        will-change: width;
+      }
+
+      .app-splash__percent {
+        font: 500 12px/1 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+        opacity: 0.75;
+        letter-spacing: 0.02em;
+        font-variant-numeric: tabular-nums;
+      }
+
+      @keyframes splashFloat {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-7px);
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .app-splash__logo {
+          animation: none;
+        }
+        .app-splash__barFill {
+          transition: none;
+        }
+      }
+    </style>
+
+	<script>
+  (function () {
+    window.__APP_READY__ = window.__APP_READY__ || false;
+
+    try {
+		var saved = localStorage.getItem("theme");
+		var prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+		var shouldBeDark = saved === "dark" || (saved === "system" && prefersDark);
+		var shouldBeLight = saved === "light" || (saved === "system" && !prefersDark);
+
+		if (shouldBeDark) document.documentElement.classList.add("dark");
+		if (shouldBeLight) document.documentElement.classList.remove("dark");
+    } catch (e) {}
+
+    var timer = null;
+    var p = 0;
+    var cap = 90;
+
+    function setProgress(bar, percentEl, value) {
+		var v = Math.max(0, Math.min(100, Math.floor(value)));
+		bar.style.width = v + "%";
+		percentEl.textContent = v + "%";
+    }
+
+    function closeSplash() {
+		var splash = document.getElementById("app-splash");
+		var bar = document.getElementById("app-splash-bar");
+		var percentEl = document.getElementById("app-splash-percent");
+		if (!splash) return;
+
+		if (timer) {
+			clearInterval(timer);
+			timer = null;
+		}
+
+		if (bar && percentEl) setProgress(bar, percentEl, 100);
+
+		splash.style.transition = "opacity 220ms ease";
+		splash.style.opacity = "0";
+		setTimeout(function () {
+			if (splash && splash.parentNode) splash.parentNode.removeChild(splash);
+		}, 250);
+    }
+
+    window.addEventListener(
+      	"app:ready",
+		function () {
+			window.__APP_READY__ = true;
+			closeSplash();
+		},
+      	{ once: true }
+    );
+
+    function startProgressNow() {
+		var bar = document.getElementById("app-splash-bar");
+		var percentEl = document.getElementById("app-splash-percent");
+		if (!bar || !percentEl) return false;
+
+		setProgress(bar, percentEl, 2);
+
+		var slowModeStates = ["loading"];
+
+		var slowMode = slowModeStates.includes(document.readyState);
+		var intervalMs = slowMode ? 300 : 80;
+
+		timer = setInterval(function () {
+			if (window.__APP_READY__) {
+				closeSplash();
+				return;
+			}
+
+			var isLoading = slowModeStates.includes(document.readyState);
+			slowMode = isLoading;
+
+			var ease = slowMode ? 0.03 : 0.08;
+			var minStep = slowMode ? 0.18 : 0.35;
+
+			var delta = Math.max(minStep, (cap - p) * ease);
+			p = Math.min(cap, p + delta);
+
+			setProgress(bar, percentEl, p);
+		}, intervalMs);
+
+		return true;
+    }
+
+    function waitForSplashEls() {
+		if (window.__APP_READY__) {
+			closeSplash();
+			return;
+		}
+
+		if (!startProgressNow()) {
+			requestAnimationFrame(waitForSplashEls);
+		}
+    }
+
+    waitForSplashEls();
+
+    window.addEventListener("pageshow", function () {
+		if (!document.getElementById("app-splash") && timer) {
+			clearInterval(timer);
+			timer = null;
+		}
+    });
+  })();
+</script>
   </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+
+	<body>
+		<div id="app-splash" aria-label="Loading">
+			<div class="app-splash__inner">
+				<img class="app-splash__logo" src="/assets/logo.svg" alt="Logo" />
+				<div class="app-splash__bar" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+					<div class="app-splash__barFill" id="app-splash-bar"></div>
+				</div>
+				<div class="app-splash__percent" id="app-splash-percent">0%</div>
+			</div>
+		</div>
+
+		<div id="root"></div>
+		<script type="module" src="/src/main.tsx"></script>
+	</body>
 </html>

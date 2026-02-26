@@ -233,3 +233,11 @@
   opacity: 1;
 }
 
+html.dark #app-splash {
+  background: #000000;
+  color: #ffffff;
+}
+html:not(.dark) #app-splash {
+  background: #ffffff;
+  color: #0a0a0a;
+}
