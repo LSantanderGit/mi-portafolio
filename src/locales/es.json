@@ -51,8 +51,15 @@
   },
   "pages": {
     "home": {
-      "title": "Inicio",
-      "welcome": "Bienvenido a mi portafolio personal."
+		"title": "Inicio",
+		"welcome": "Bienvenido a mi portafolio personal.",
+		"about": {
+				"Titles": {
+					"0": "Desarrollador Full-Stack",
+					"1": "Analista en Sistemas",
+					"2": "Técnico en Informática"
+				}
+			}
     },
     "projects": {
 		"title":{

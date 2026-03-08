@@ -50,8 +50,15 @@
   },
   "pages": {
     "home": {
-      "title": "Home",
-      "welcome": "Welcome to my personal portfolio."
+		"title": "Home",
+		"welcome": "Welcome to my personal portfolio.",
+		"about": {
+			"Titles": {
+				"0": "Full-Stack Developer",
+				"1": "Systems Analyst",
+				"2": "IT Technician"
+			}
+		}
     },
     "projects": {
       "title":{

@@ -2,8 +2,12 @@
 
 import React from "react"
 
+import { FaLinkedin, FaGithub, FaPhone, FaWhatsapp, FaTelegram } from "react-icons/fa";
+import { Mail, ExternalLink } from "lucide-react";
+
 import { motion } from "framer-motion"
 import { useTranslation } from "react-i18next"
+import IconContainer from "@/components/ui/icon-container"
 import LazyResource from "@/components/ui/lazy-resource"
 import GlassCard from "@/components/ui/glass-card"
 import { useMotion } from "@/components/providers/motion-provider"
@@ -18,6 +22,9 @@ import {
 import { techStack } from "@/locales/tech-stacks"
 import { resolveBadges } from "@/lib/badges/badge.helpers"
 import BadgeGroup from "@/components/ui/badge/badge-group"
+import Badge from "@/components/ui/badge/badge"
+
+import contacts from "@/locales/contacts.json";
 
 const topTechStack = techStack.slice(0, 6)
 const resolvedBadges = resolveBadges(topTechStack)
@@ -39,6 +46,18 @@ type MosaicItemProps = {
   className?: string
   children?: React.ReactNode
   delay?: number
+}
+
+type IconType = React.ComponentType<{ className?: string }>
+
+const iconMap: Record<string, IconType> = {
+	phone: FaPhone,
+	mail: Mail,
+	whatsapp: FaWhatsapp,
+	telegram: FaTelegram,
+	github: FaGithub,
+	linkedin: FaLinkedin,
+	external: ExternalLink,
 }
 
 const loadProjects = async (): Promise<Project[]> => {
@@ -153,9 +172,17 @@ export default function MosaicSection() {
             href="/about"
             delay={0.2}
           >
-            <div className="flex items-center gap-2 text-xs text-muted-foreground">
-              <span>Full-Stack Developer</span>
-            </div>
+			<div className="flex flex-col gap-2">
+				{[0, 1, 2].map((index) => (
+					<Badge
+						key={index}
+						label={t(`pages.home.about.Titles.${index}`)}
+						size="sm"
+						variant="outline"
+						className="w-fit"
+					/>
+				))}
+			</div>
           </MosaicItem>
 
           {/* Tools */}
@@ -185,24 +212,39 @@ export default function MosaicSection() {
             className="md:col-span-2"
             delay={0.4}
           >
-            <div className="flex items-center gap-3 mt-2">
-              <div className="flex -space-x-2">
-                {["github", "linkedin", "mail"].map((icon, i) => (
-                  <div 
-                    key={icon}
-                    className="w-8 h-8 rounded-full bg-secondary/80 border-2 border-background flex items-center justify-center"
-                    style={{ zIndex: 3 - i }}
-                  >
-                    <span className="text-xs">
-                      {icon === "github" ? "GH" : icon === "linkedin" ? "LI" : "@"}
-                    </span>
-                  </div>
-                ))}
-              </div>
-              <span className="text-xs text-muted-foreground">
-                {t("pages.links.contacts.title")}
-              </span>
-            </div>
+			<div className="flex items-center gap-3 mt-2">
+				<div className="flex -space-x-2">
+					{
+						contacts.map((contact, i) => {
+							const Icon = iconMap[contact.icon] || ExternalLink
+
+							return(
+								<div 
+									key={contact.icon}
+									className="w-8 h-8 rounded-full bg-secondary/80 border-2 border-background flex items-center justify-center"
+									style={{ zIndex: 3 - i }}
+								>
+									<Icon className="w-4 h-4 text-foreground" />
+								</div>
+							)
+						})
+					}
+					{/* {["github", "linkedin", "mail"].map((icon, i) => (
+						<div 
+							key={icon}
+							className="w-8 h-8 rounded-full bg-secondary/80 border-2 border-background flex items-center justify-center"
+							style={{ zIndex: 3 - i }}
+						>
+							<span className="text-xs">
+								{icon === "github" ? "GH" : icon === "linkedin" ? "LI" : "@"}
+							</span>
+						</div>
+					))} */}
+				</div>
+				<span className="text-xs text-muted-foreground">
+					{t("pages.links.contacts.title")}
+				</span>
+			</div>
           </MosaicItem>
         </div>
       </div>

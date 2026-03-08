@@ -9,7 +9,7 @@ import {
   FaLinkedin,
 } from "react-icons/fa"
 
-import contactsData from "@/locales/contacts.json"
+import contacts from "@/locales/contacts.json"
 import ContactLinkItem from "@/components/ui/contact-link-item"
 
 /* =======================
@@ -49,7 +49,7 @@ export default function ContactLinksCard() {
       </h2>
 
       <div className="grid gap-3">
-        {contactsData.contacts.map((contact) => {
+        {contacts.map((contact) => {
           const Icon = iconMap[contact.icon] || ExternalLink
 
           return (

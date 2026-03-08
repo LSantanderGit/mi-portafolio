@@ -14,7 +14,7 @@ const iconMap: Record<string, IconType> = {
 }
 
 // Get main contact links (same as contact-cta)
-const socialLinks = contacts.contacts.filter(c => 
+const socialLinks = contacts.filter(c => 
   ["email", "github", "linkedin"].includes(c.id)
 )
 

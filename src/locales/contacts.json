@@ -1,5 +1,4 @@
-{
-  "contacts": [
+[
 	{
 		"id": "phone",
 		"icon": "phone",
@@ -30,5 +29,4 @@
       "icon": "linkedin",
       "url": "https://www.linkedin.com/in/lucas-mat%C3%ADas-santander-99a974274/"
     }
-  ]
-}
+]
