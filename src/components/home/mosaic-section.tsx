@@ -229,17 +229,6 @@ export default function MosaicSection() {
 							)
 						})
 					}
-					{/* {["github", "linkedin", "mail"].map((icon, i) => (
-						<div 
-							key={icon}
-							className="w-8 h-8 rounded-full bg-secondary/80 border-2 border-background flex items-center justify-center"
-							style={{ zIndex: 3 - i }}
-						>
-							<span className="text-xs">
-								{icon === "github" ? "GH" : icon === "linkedin" ? "LI" : "@"}
-							</span>
-						</div>
-					))} */}
 				</div>
 				<span className="text-xs text-muted-foreground">
 					{t("pages.links.contacts.title")}
