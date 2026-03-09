@@ -7,7 +7,6 @@ import { Mail, ExternalLink } from "lucide-react";
 
 import { motion } from "framer-motion"
 import { useTranslation } from "react-i18next"
-import IconContainer from "@/components/ui/icon-container"
 import LazyResource from "@/components/ui/lazy-resource"
 import GlassCard from "@/components/ui/glass-card"
 import { useMotion } from "@/components/providers/motion-provider"

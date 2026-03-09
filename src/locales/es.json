@@ -53,6 +53,10 @@
     "home": {
 		"title": "Inicio",
 		"welcome": "Bienvenido a mi portafolio personal.",
+		"hero":{
+			"filename": "espanol_lucas_matias_santander_cv.pdf",
+			"download": "Descargar CV"
+		},
 		"about": {
 				"Titles": {
 					"0": "Desarrollador Full-Stack",

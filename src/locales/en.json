@@ -52,6 +52,10 @@
     "home": {
 		"title": "Home",
 		"welcome": "Welcome to my personal portfolio.",
+		"hero":{
+			"filename": "english_lucas_matias_santander_cv.pdf",
+			"download": "Download CV"
+		},
 		"about": {
 			"Titles": {
 				"0": "Full-Stack Developer",

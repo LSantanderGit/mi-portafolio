@@ -31,7 +31,7 @@ const iconMap: Record<string, IconType> = {
 }
 
 // Get main contact links
-const mainContacts = contacts.contacts.filter(c => 
+const mainContacts = contacts.filter(c => 
   ["email", "github", "linkedin", "whatsapp"].includes(c.id)
 )
 

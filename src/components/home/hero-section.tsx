@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 import { useTranslation } from "react-i18next"
 import { useMotion } from "@/components/providers/motion-provider"
 import GlassCard from "@/components/ui/glass-card"
-import { ArrowRight, MapPin } from "lucide-react"
+import { ArrowRight, MapPin, DownloadIcon } from "lucide-react"
 import { Link } from "react-router-dom"
 
 export default function HeroSection() {
@@ -58,26 +58,44 @@ export default function HeroSection() {
 
                 {/* Location */}
                 <div className="flex items-center gap-2 text-muted-foreground mb-8">
-                  <MapPin className="w-4 h-4" />
-                  <span>{t("pages.links.profile.location")}</span>
+                  	<MapPin className="w-4 h-4" />
+                  	<span>{t("pages.links.profile.location")}</span>
                 </div>
 
                 {/* CTA Buttons */}
-                <div className="flex flex-wrap gap-4">
-                  <Link
-                    to="/links"
-                    className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-foreground text-background font-medium hover:opacity-90 transition-opacity"
-                  >
-                    {t("nav.links.")}
-                    <ArrowRight className="w-4 h-4" />
-                  </Link>
-                  <Link
-                    to="/about"
-                    className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-border bg-background/50 text-foreground font-medium hover:bg-accent transition-colors"
-                  >
-                    {t("nav.about.")}
-                  </Link>
-                </div>
+				<div className="flex flex-col gap-3">
+					<a 
+						href={`/assets/cv/${t("pages.home.hero.filename")}`} 
+						download="Lucas_Matias_Santander_CV.pdf" 
+						className="group relative inline-flex w-full items-center justify-center gap-3 px-8 py-4 rounded-xl font-semibold text-white text-lg overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:shadow-lg hover:shadow-purple-500/25"
+					>
+						<span className="absolute inset-0 animate-gradient bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 bg-[length:200%_200%]" />
+						
+						<span className="absolute inset-0 animate-shimmer bg-gradient-to-r from-transparent via-white/20 to-transparent bg-[length:200%_100%]" />
+						
+						<span className="relative z-10 flex items-center gap-2">
+							{t("pages.home.hero.download")}
+							<DownloadIcon className="w-5 h-5 transition-transform group-hover:translate-y-0.5" />
+						</span>
+					</a>
+
+					<div className="flex gap-3">
+						<Link
+							to="/links"
+							className="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-foreground text-background font-medium hover:opacity-90 transition-opacity"
+						>
+							{t("nav.links.")}
+							<ArrowRight className="w-4 h-4" />
+						</Link>
+						<Link
+							to="/about"
+							className="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl border border-border bg-background/50 text-foreground font-medium hover:bg-accent transition-colors"
+						>
+							{t("nav.about.")}
+							<ArrowRight className="w-4 h-4" />
+						</Link>
+					</div>
+				</div>
               </MotionWrapper>
             </div>
 
