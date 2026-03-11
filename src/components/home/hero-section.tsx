@@ -100,37 +100,32 @@ export default function HeroSection() {
             </div>
 
             {/* Right side - Image */}
-            <div className="relative flex items-end justify-center lg:justify-end order-1 lg:order-2 overflow-hidden min-h-[300px] lg:min-h-0">
-              {/* Gradient overlay behind image */}
-              <div className="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-l from-transparent via-transparent to-background/80 z-10 pointer-events-none" />
+            <div className="relative flex items-center justify-center order-1 lg:order-2 overflow-hidden min-h-[350px] lg:min-h-0">
+              {/* Decorative glow - more visible */}
+              <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                <div className="w-[500px] h-[500px] bg-sky-500/40 rounded-full blur-[80px]" />
+              </div>
               
-              {/* Decorative glow */}
-              <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-sky-500/20 rounded-full blur-[100px] pointer-events-none" />
-              
-              {/* Profile Image - positioned to emerge from bottom-right corner */}
+              {/* Profile Image - centered with zoom effect */}
               <MotionImage
-                src="/assets/profile2.png"
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/profile2-hv6gnDbb7RxB2wJKHuGuYdjdZM7OiD.jpg"
                 alt="Lucas Santander"
-                className="relative z-20 w-auto h-[350px] md:h-[450px] lg:h-[550px] object-contain object-bottom drop-shadow-2xl cursor-pointer"
+                className="relative z-20 w-[320px] h-[320px] md:w-[450px] md:h-[450px] lg:w-[520px] lg:h-[520px] object-cover object-center rounded-2xl drop-shadow-2xl cursor-pointer"
                 {...(animationsEnabled && {
                   initial: { 
                     scale: 0.8, 
-                    opacity: 0,
-                    x: 100,
-                    y: 50
+                    opacity: 0
                   },
                   animate: { 
                     scale: 1, 
-                    opacity: 1,
-                    x: 0,
-                    y: 0
+                    opacity: 1
                   },
                   whileHover: { 
                     scale: 1.08,
-                    transition: { duration: 0.3, ease: "easeOut" }
+                    transition: { duration: 0.5, ease: "easeOut" }
                   },
                   transition: { 
-                    duration: 0.8, 
+                    duration: 0.5, 
                     ease: "easeOut",
                     delay: 0.2
                   }

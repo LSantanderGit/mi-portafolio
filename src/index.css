@@ -241,3 +241,49 @@ html:not(.dark) #app-splash {
   background: #ffffff;
   color: #0a0a0a;
 }
+
+.hero-title-shadow {
+  text-shadow: 
+    0 0 20px rgba(255, 255, 255, 0.8),
+    0 0 40px rgba(255, 255, 255, 0.4),
+    0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.dark .hero-title-shadow {
+  text-shadow: 
+    0 0 20px rgba(0, 0, 0, 0.9),
+    0 0 40px rgba(0, 0, 0, 0.6),
+    0 2px 4px rgba(255, 255, 255, 0.2);
+}
+
+/* Hero name glow effect - dynamic for both themes */
+.hero-name-glow {
+  filter: 
+    drop-shadow(0 0 12px rgba(139, 92, 246, 0.5))
+    drop-shadow(0 0 24px rgba(236, 72, 153, 0.4))
+    drop-shadow(0 4px 8px rgba(0, 0, 0, 0.4));
+}
+
+.dark .hero-name-glow {
+  filter: 
+    drop-shadow(0 0 16px rgba(139, 92, 246, 0.6))
+    drop-shadow(0 0 32px rgba(236, 72, 153, 0.5))
+    drop-shadow(0 4px 12px rgba(0, 0, 0, 0.8));
+}
+
+/* Gradient animation for hero name */
+@keyframes gradient-move {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient-move {
+  animation: gradient-move 8s ease-in-out infinite;
+}

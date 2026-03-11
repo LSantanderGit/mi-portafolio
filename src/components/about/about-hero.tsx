@@ -20,35 +20,35 @@ export default function AboutHero() {
         "
       >
         {/* Fondo animado */}
-        <div className="absolute inset-0 z-0 opacity-60 pointer-events-none">
+        <div className="absolute inset-0 z-0  blur-[1px] pointer-events-none">
           <TechMarquee />
         </div>
 
         {/* Gradiente overlay */}
         <div
           className="
-            absolute inset-0 z-0
+            absolute inset-0 z-[1]
             bg-gradient-to-br
-            from-sky-500/10
-            via-white/5
-            to-sky-300/10
-            dark:from-sky-400/10
-            dark:via-black/10
-            dark:to-sky-600/10
+            from-sky-500/15
+            via-white/40
+            to-sky-300/15
+            dark:from-sky-400/15
+            dark:via-black/50
+            dark:to-sky-600/15
           "
         />
 
         {/* Contenido */}
         <div className="relative z-10 flex flex-col items-center gap-6 px-8 py-20 text-center">
-          {/* Título */}
+          {/* Título with dynamic shadow */}
           <h1
             className="
               text-sm
               font-semibold
               tracking-widest
               uppercase
-              text-white
-              drop-shadow-[0_1px_2px_rgba(0,0,0,0.6)]
+              text-foreground
+              hero-title-shadow
             "
           >
             {t("pages.about.title")}
@@ -58,12 +58,12 @@ export default function AboutHero() {
             className="
               text-4xl md:text-5xl lg:text-6xl
               font-extrabold
-              bg-[linear-gradient(90deg,#38bdf8_0%,#ffffff_25%,#fde68a_50%,#ffffff_75%,#38bdf8_100%)]
+              bg-[linear-gradient(90deg,#8b5cf6_0%,#ec4899_25%,#ef4444_50%,#facc15_75%,#8b5cf6_100%)]
               bg-[length:300%_100%]
               bg-clip-text
               text-transparent
-              animate-[gradient-move_12s_ease-in-out_infinite]
-              drop-shadow-[0_4px_12px_rgba(0,0,0,0.4)]
+              animate-gradient-move
+              hero-name-glow
             "
           >
             Lucas Matías Santander
