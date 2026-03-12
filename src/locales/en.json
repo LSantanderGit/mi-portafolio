@@ -2,6 +2,26 @@
 	"app": {
 		"loading": "Loading..."
 	},
+	"error": {
+		"404": {
+			"title": "Page Not Found",
+			"description": "Oops! The page you're looking for doesn't exist or has been moved. Don't worry, let's get you back on track."
+		},
+		"500": {
+			"title": "Server Error",
+			"description": "Something went wrong on our end. We're working to fix it. Please try again in a few moments."
+		},
+		"generic": {
+			"title": "Something Went Wrong",
+			"description": "An unexpected error occurred. Please try again or contact me by my social media if the problem persists."
+		},
+		"actions": {
+			"goHome": "Go to Home",
+			"goBack": "Go Back",
+			"tryAgain": "Try Again"
+		},
+		"hint": "If the problem persists, please contact me by my social media."
+	},
   "nav": {
     "menu": "Menu",
     "home": {

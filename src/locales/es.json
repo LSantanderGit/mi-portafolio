@@ -2,6 +2,26 @@
 	"app": {
 		"loading": "Cargando..."
 	},
+	"error": {
+		"404": {
+			"title": "Página No Encontrada",
+			"description": "¡Ups! La página que buscás no existe o fue movida. No te preocupés, te redirigiremos al inicio."
+		},
+			"500": {
+			"title": "Error del Servidor",
+			"description": "Algo salió mal de nuestro lado. Estamos trabajando para solucionarlo. Por favor, intenta de nuevo en unos momentos."
+		},
+		"generic": {
+			"title": "Algo Salió Mal",
+			"description": "Ocurrió un error inesperado. Por favor, intentá de nuevo o contactame por mis redes sociales si el problema persiste."
+		},
+		"actions": {
+			"goHome": "Ir al Inicio",
+			"goBack": "Volver",
+			"tryAgain": "Intentar de Nuevo"
+		},
+		"hint": "Si el problema persiste, por favor contactame por mis redes sociales."
+	},
   "nav": {
     "menu": "Menú",
     "home": {
