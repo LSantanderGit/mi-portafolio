@@ -1,7 +1,7 @@
 'use client';
 
 import { ToolsNetwork } from "@/components/tools/tools-network"
-import type { Tool } from "@/components/tools/tools-network"
+import type { Tool } from "@/components/tools/tools-network/types"
 import ToolsGrid from "@/components/tools/tools-grid"
 
 import toolsData from "@/locales/tools.json"
